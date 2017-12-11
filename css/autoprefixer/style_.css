@@ -3127,19 +3127,55 @@ html, body {
   overflow: hidden;
 }
 
+.pageBg_09 {
+  position: relative;
+}
+
 #contactForm {
+  font-size: 1.8em;
   position: absolute;
-  left: 160px;
-  top: 210px;
+  width: 40%;
   height: 500px;
-  border: #9b1616 1px solid;
+  top: 25%;
+  left: 13%;
+}
+
+#contactForm > div {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #9f9f9f;
+  padding: 20px 10px;
+}
+
+#contactForm > div:hover {
+  background-color: #161616;
+  border-bottom: 2px solid #f68b20;
+}
+
+#contactForm .shield {
+  width: 50%;
+}
+
+#contactForm i {
+  margin-right: 15px;
+  margin-left: 10px;
+  color: #9f9f9f;
+}
+
+#contactForm input {
+  background-color: rgba(1, 1, 1, 0);
+  border: none;
+  width: 80%;
+  height: 1em;
+  font-size: 1em;
+  color: #fff;
 }
 
 #contactLink {
   position: absolute;
-  left: 910px;
-  top: 210px;
+  width: 20%;
   height: 500px;
+  top: 25%;
+  right: 10%;
   border: #9b1616 1px solid;
   font-size: 1.4em;
 }

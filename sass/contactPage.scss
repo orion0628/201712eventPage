@@ -1,32 +1,74 @@
 //contact page
+$topspace:25%;
+$styleColor:#f68b20;
 
+
+.pageBg_09{
+  position: relative;
+}
 #contactForm{
-    position: absolute;
-    left: 160px;
-    top: 210px;
-    height: 500px;
-    border: #9b1616 1px solid;
+  font-size: 1.8em;
+  position: absolute;
+  width: 40%;
+  height: 500px;
+  top:$topspace;
+  left: 13%;
+  //  border: #9b1616 1px solid;
+
+  > div{
+      margin-bottom: 10px;
+      border-bottom: 2px solid #9f9f9f;
+      padding:20px 10px;
+        &:hover{
+          background-color: #161616;
+          border-bottom: 2px solid #f68b20;
+          }
+      }
+
+  .shield{
+    width: 50%;
+    }
+  i{
+    margin-right: 15px;
+    margin-left: 10px;
+    color:#9f9f9f;
+    }
+  input{
+    background-color:rgba(1,1,1,0);
+    border: none;
+    width: 80%;
+    height: 1em;
+    font-size: 1em;
+    color:#fff;
+      &:hover{
+                }
+      &:active{
+                }
+    }
+
   }
-  #contactLink{
-    position: absolute;
-    left: 910px;
-    top: 210px;
-    height: 500px;
-    border: #9b1616 1px solid;
-    font-size: 1.4em;
-    span{
+
+ 
+
+
+#contactLink{
+  position: absolute;
+  width: 20%;
+  height: 500px;
+  top: $topspace;
+  right: 10%;
+  border: #9b1616 1px solid;
+  font-size: 1.4em;
+  span{
       border: 1px solid #ffffff;
       border-radius: 60px;
       width: 120px;
       height: 120px;
       margin: 15px;
     }
-    i {
-      
-      font-size: 1.7em;
-  
-    
-    }
-    
-    
+  i {
+    font-size: 1.7em;
   }
+    
+    
+}
