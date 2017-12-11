@@ -1,0 +1,59 @@
+/* slider-bar */
+.slider-bar {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -150px;
+  z-index: 110;
+  width: 20px;
+  height: 300px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.slider-bar a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 auto 12px;
+  border: 2px solid #a0a3a2;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.slider-bar a.current {
+  background-color: #f68b20;
+  border: 2px solid #f68b20;
+  width: 12px;
+  height: 12px;
+}
+
+.slider-bar .mouse {
+  display: block;
+  width: 25px;
+  padding-top: 38px;
+  text-align: center;
+  color: #FFF;
+  background: url("../images/mouse.png") no-repeat 0 0;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="images/mouse.png");
+  _background: none;
+}
+
+@keyframes tipTxt {
+  from {
+    color: #a0a3a2;
+  }
+  to {
+    color: #ffffff;
+  }
+}
+
+.sliderTip {
+  width: 50px;
+  margin: 15px 0 0 -3px;
+  animation-name: tipTxt;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}

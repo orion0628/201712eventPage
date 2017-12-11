@@ -5,102 +5,53 @@
   background-color: #1E1E1E;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-.pageBg_01 {
+div.section > div {
   position: absolute;
   width: 100%;
-  height: 1000px;
+  height: 100%;
+  /*1000px*/
   top: 50%;
-  margin-top: -500px;
+  margin-top: -28%;
+  /*-500px*/
+  background-size: 100% auto;
+}
+
+.pageBg_01 {
   background: url("../images/pageBg_01.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_02 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_02.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_03 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_03.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_04 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_04.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_05 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_05.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_06 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_06.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_07 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_07.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_08 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_08.jpg") no-repeat center 0;
-  background-size: cover;
 }
 
 .pageBg_09 {
-  position: absolute;
-  width: 100%;
-  height: 1000px;
-  top: 50%;
-  margin-top: -500px;
   background: url("../images/pageBg_09.jpg") no-repeat center 0;
-  background-size: cover;
 }
