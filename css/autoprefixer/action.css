@@ -1,0 +1,125 @@
+
+/* slider-bar */
+
+.slider-bar {
+    position: fixed;
+    _position: absolute;
+    right: 70px;
+    top: 50%;
+    margin-top: -85px;
+    z-index: 110;
+    width: 25px;
+    transition: all 0.5s ease;
+}
+
+.slider-bar a {
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin: 0 auto 12px;
+    border: 2px solid #FFF;
+    background-color: #FFF;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.slider-bar a.current {
+    background-color: #5D5D5D;
+}
+
+.slider-bar .mouse {
+    display: block;
+    width: 25px;
+    padding-top: 38px;
+    text-align: center;
+    color: #FFF;
+    background: url("../images/mouse.png") no-repeat 0 0;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src="images/mouse.png");
+    _background: none;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    top: 36%;
+    left: 6%;
+    z-index: 3;
+    color: #FFF;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-align: left;
+    transition: all .3s ease;
+}
+
+.title ul li {
+    padding-bottom: 40px;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 53%;
+    left: 6%;
+    z-index: 3;
+    color: #FFF;
+    font-size: 20px;
+    font-family: sans-serif;
+    /* font-weight:bold; */
+    text-align: left;
+    transition: all .3s ease;
+}
+
+.content ul li {
+    padding-bottom: 25px;
+}
+
+.content ul li i {
+    padding-right: 12px;
+}
+
+.content ul li span {
+    padding-left: 10px;
+    /* display: inline-block; */
+    color: #f68c1f;
+}
+
+.content ul li span:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.content ul li span.current {
+  color: #fff671;
+}
+
+.tabImg{
+  position: absolute;
+  width: 1920px;
+  height: 1000px;
+  left: 70%;
+  top: 60%;
+  margin-left: -960px;
+  margin-top: -500px;
+}
+
+.tabImg.tab1{
+  background: url(../images/tabShowImg1.png) no-repeat center 0;
+}
+
+.tabImg.tab2{
+  background: url(../images/tabShowImg2.png) no-repeat center 0;
+}
+
+.tabImg.tab3{
+  background: url(../images/tabShowImg3.png) no-repeat center 0;
+}
+
+.tabImg.tab4{
+  background: url(../images/tabShowImg4.png) no-repeat center 0;
+}
+
+.tabImg.tab5{
+  background: url(../images/tabShowImg5.png) no-repeat center 0;
+}
+
