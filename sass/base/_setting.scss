@@ -17,7 +17,7 @@ body {
   background: #1f1f1f;
   font-size: 1em;
   line-height: 0em;
-  color: #ffffff
+  color: #ffffff;
 }
 .wrapper {
   height: 100%;
@@ -25,13 +25,20 @@ body {
 }
 html,body{height:100%;overflow:hidden;}
 
-.wrapper {
-    height: 100%;
-    overflow: hidden;
-  }
-
   * {
     //   margin: 0px !important;
     //   padding: 0px !important;
     //   position: 0px !important;
     }
+a:link{
+      color: #ffde00;
+      text-decoration-line: none;
+    }
+
+button {
+      background-color: #f68b20;
+      padding: .7em 80px;
+      color: #ffffff;
+      border: 0px;
+      font-size: 1em;
+  }

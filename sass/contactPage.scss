@@ -1,74 +1,102 @@
 //contact page
-$topspace:25%;
+$topspace:18vw;
 $styleColor:#f68b20;
-
-
-.pageBg_09{
-  position: relative;
+.pageBg_09 {
+    position: relative;
 }
-#contactForm{
-  font-size: 1.8em;
-  position: absolute;
-  width: 40%;
-  height: 500px;
-  top:$topspace;
-  left: 13%;
-  //  border: #9b1616 1px solid;
 
-  > div{
-      margin-bottom: 10px;
-      border-bottom: 2px solid #9f9f9f;
-      padding:20px 10px;
-        &:hover{
-          background-color: #161616;
-          border-bottom: 2px solid #f68b20;
-          }
-      }
-
-  .shield{
-    width: 50%;
+#contactForm {
+    text-align: center;
+    font-size: 1.4em;
+    position: absolute;
+    width: 40vw;
+    top: $topspace;
+    left: 13vw; //  border: #9b1616 1px solid;
+    >div {
+        text-align: left;
+        margin-bottom: .5em;
+        border-bottom: 2px solid #9f9f9f;
+        padding: 0.5em .5em;
+        &:hover {
+            background-color: #000000;
+            border-bottom: 2px solid #f68b20;
+            i {
+                color: #ffffff;
+            }
+        }
     }
-  i{
-    margin-right: 15px;
-    margin-left: 10px;
-    color:#9f9f9f;
+    button {
+        clear: both;
     }
-  input{
-    background-color:rgba(1,1,1,0);
-    border: none;
-    width: 80%;
-    height: 1em;
-    font-size: 1em;
-    color:#fff;
-      &:hover{
-                }
-      &:active{
-                }
+    .shield {
+        input {
+            width: 50%;
+        }
+        div {
+            float: right;
+            background-color: #414141;
+            width: auto;
+            height: 1em;
+            ;
+        }
     }
-
-  }
-
- 
-
-
-#contactLink{
-  position: absolute;
-  width: 20%;
-  height: 500px;
-  top: $topspace;
-  right: 10%;
-  border: #9b1616 1px solid;
-  font-size: 1.4em;
-  span{
-      border: 1px solid #ffffff;
-      border-radius: 60px;
-      width: 120px;
-      height: 120px;
-      margin: 15px;
+    .comment {
+        height: 100px;
+        position: relative;
+        span {
+            position: absolute;
+            top: 10px;
+        }
+        textarea {
+            position: absolute;
+            left: 64px;
+            height: 4em;
+        }
     }
-  i {
-    font-size: 1.7em;
-  }
-    
-    
+    i {
+        margin-right: 15px;
+        margin-left: 10px;
+        color: #9f9f9f;
+    }
+    input {
+        height: 1em;
+        &:hover {}
+        &:active {}
+    }
+    input,
+    textarea {
+        background-color: rgba(1, 1, 1, 0);
+        border: none;
+        width: 70%;
+        font-size: 1em;
+        color: #fff;
+        &:hover {}
+        &:active {}
+    }
+}
+
+#contactLink {
+    font-size: 1.6em;
+    position: absolute;
+    width: 25vw;
+    height: 500px;
+    top: $topspace;
+    right: 8%;
+    li {
+        clear: left;
+        line-height: 70px;
+    }
+    div {
+        border: 1px solid #ffffff;
+        border-radius: 60px;
+        width: 70px;
+        height: 70px;
+        margin: 0px 20px 20px 0px;
+        text-align: center;
+        float: left;
+    }
+    i {
+        margin-top: 25%;
+        font-size: 1.4em;
+    }
 }
