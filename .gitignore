@@ -46,3 +46,5 @@ compress
 dest/css
 dest/css/autoprefixer
 .map
+css/*
+index.html
