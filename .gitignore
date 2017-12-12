@@ -47,4 +47,5 @@ dest/css
 dest/css/autoprefixer
 .map
 css/*
+css/**/*
 index.html
