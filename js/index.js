@@ -500,4 +500,16 @@
 		}
 	});
 
+
+	$(".content ul li").on('mousemove', function (event) {
+		var x = event;
+		$(".content ul li").find('span').removeClass('current');
+		$(this).find('span').addClass('current');
+
+		var _tabImg = $("#tabImg");
+		$("#tabImg").attr('class', '');
+		$("#tabImg").addClass('tabImg');
+		$("#tabImg").addClass('tab' + ($(this).index() + 1));
+
+	});
 })(jQuery);
