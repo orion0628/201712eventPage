@@ -1,7 +1,7 @@
 
 /* slider-bar */
 
-.slider-bar {
+/* .slider-bar {
     position: fixed;
     _position: absolute;
     right: 70px;
@@ -71,7 +71,6 @@
     color: #FFF;
     font-size: 20px;
     font-family: sans-serif;
-    /* font-weight:bold; */
     text-align: left;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -89,7 +88,6 @@
 
 .content ul li span {
     padding-left: 10px;
-    /* display: inline-block; */
     color: #f68c1f;
 }
 
@@ -131,4 +129,4 @@
 .tabImg.tab5{
   background: url(../images/tabShowImg5.png) no-repeat center 0;
 }
-
+ */

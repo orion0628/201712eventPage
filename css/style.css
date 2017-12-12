@@ -3117,8 +3117,9 @@ body {
 }
 
 .wrapper {
+  margin-left: 50%;
+  width: 1366px;
   height: 100%;
-  overflow: hidden;
 }
 
 html, body {
@@ -3141,7 +3142,8 @@ button {
 
 .section {
   position: relative;
-  width: 100%;
+  width: 1366px;
+  margin-left: -683px;
   height: 100%;
   background-color: #1E1E1E;
   overflow: hidden;
@@ -3153,48 +3155,57 @@ button {
 div.section > div {
   position: absolute;
   width: 100%;
-  height: 100%;
-  /*1000px*/
+  height: 1000px;
   top: 50%;
-  margin-top: -28%;
+  margin-top: -30%;
   /*-500px*/
   background-size: 100% auto;
 }
 
 .pageBg_01 {
   background: url("../images/pageBg_01.jpg") no-repeat center 0;
+  height: 787px;
+  display: block;
 }
 
 .pageBg_02 {
   background: url("../images/pageBg_02.jpg") no-repeat center 0;
+  height: 793px;
 }
 
 .pageBg_03 {
   background: url("../images/pageBg_03.jpg") no-repeat center 0;
+  height: 742px;
 }
 
 .pageBg_04 {
   background: url("../images/pageBg_04.jpg") no-repeat center 0;
+  height: 800px;
 }
 
 .pageBg_05 {
   background: url("../images/pageBg_05.jpg") no-repeat center 0;
+  height: 747px;
 }
 
 .pageBg_06 {
   background: url("../images/pageBg_06.jpg") no-repeat center 0;
+  height: 767px;
 }
 
 .pageBg_07 {
   background: url("../images/pageBg_07.jpg") no-repeat center 0;
+  height: 742px;
 }
 
 .pageBg_08 {
   background: url("../images/pageBg_08.jpg") no-repeat center 0;
+  height: 789px;
 }
 
 .pageBg_09 {
   background: url("../images/pageBg_09.jpg") no-repeat center 0;
+  height: 890px;
 }
 
 /* slider-bar */
@@ -3363,4 +3374,98 @@ div.section > div {
 #contactLink i {
   margin-top: 25%;
   font-size: 1.4em;
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  top: 36%;
+  left: 6%;
+  z-index: 3;
+  color: #FFF;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-align: left;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.title li {
+  padding-bottom: 40px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  top: 53%;
+  left: 6%;
+  z-index: 3;
+  color: #FFF;
+  font-size: 20px;
+  font-family: sans-serif;
+  /* font-weight:bold; */
+  text-align: left;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.content li {
+  padding-bottom: 25px;
+}
+
+.content li span {
+  padding-left: 10px;
+  color: #f68c1f;
+}
+
+.content li span.current {
+  color: #fff671;
+}
+
+.content li span:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.content li i {
+  padding-right: 12px;
+}
+
+div.tabImg {
+  margin-top: -150px;
+}
+
+.tabImg {
+  position: absolute;
+  width: 1366px;
+  height: 1000px;
+  right: 0px;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.tabImg.tab1 {
+  background-image: url(../images/tabShowImg1.png);
+}
+
+.tabImg.tab2 {
+  background-image: url(../images/tabShowImg2.png);
+}
+
+.tabImg.tab3 {
+  background-image: url(../images/tabShowImg3.png);
+}
+
+.tabImg.tab4 {
+  background-image: url(../images/tabShowImg4.png);
+}
+
+.tabImg.tab5 {
+  background-image: url(../images/tabShowImg5.png);
 }

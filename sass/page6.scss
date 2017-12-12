@@ -1,0 +1,100 @@
+.title {
+    position: absolute;
+    width: 100%;
+    top: 36%;
+    left: 6%;
+    z-index: 3;
+    color: #FFF;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-align: left;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    li {
+        padding-bottom: 40px;
+    }
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 53%;
+    left: 6%;
+    z-index: 3;
+    color: #FFF;
+    font-size: 20px;
+    font-family: sans-serif;
+    /* font-weight:bold; */
+    text-align: left;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    li {
+        padding-bottom: 25px;
+        span {
+            padding-left: 10px;
+            color: #f68c1f;
+            &.current {
+                color: #fff671;
+            }
+            &:hover {
+                color: #ffffff;
+                cursor: pointer;
+            }
+        }
+        i {
+            padding-right: 12px;
+        }
+    }
+}
+div.tabImg{
+    // border: 3px solid #e1e1e1;
+    margin-top: -150px;
+}
+.tabImg {
+    position: absolute;
+    width: 1366px;
+    height: 1000px;
+    right: 0px;
+    top: 0px      ;
+    // margin-left: -960px;
+    // margin-top: -500px;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    &.tab1 {
+        background-image: url(../images/tabShowImg1.png);
+    }
+    &.tab2 {
+        background-image: url(../images/tabShowImg2.png);
+    }
+    &.tab3 {
+        background-image: url(../images/tabShowImg3.png);
+    }
+    &.tab4 {
+        background-image: url(../images/tabShowImg4.png);
+    }
+    &.tab5 {
+        background-image: url(../images/tabShowImg5.png);
+    }
+}
+
+// .tabImg.tab1{
+//   background: url(../images/tabShowImg1.png) no-repeat center 0;
+// }
+// .tabImg.tab2{
+//   background: url(../images/tabShowImg2.png) no-repeat center 0;
+// }
+// .tabImg.tab3{
+//   background: url(../images/tabShowImg3.png) no-repeat center 0;
+// }
+// .tabImg.tab4{
+//   background: url(../images/tabShowImg4.png) no-repeat center 0;
+// }
+// .tabImg.tab5{
+//   background: url(../images/tabShowImg5.png) no-repeat center 0;
+// }
