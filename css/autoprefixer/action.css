@@ -87,12 +87,21 @@
 .content ul li span:hover {
     color: #ffffff;
     cursor: pointer;
+<<<<<<< HEAD
 }
 
 .content ul li span.current {
   color: #fff671;
 }
 
+=======
+}
+
+.content ul li span.current {
+  color: #fff671;
+}
+
+>>>>>>> master
 .tabImg{
   position: absolute;
   width: 1920px;
@@ -122,4 +131,8 @@
 .tabImg.tab5{
   background: url(../images/tabShowImg5.png) no-repeat center 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 
