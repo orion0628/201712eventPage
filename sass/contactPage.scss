@@ -1,6 +1,7 @@
 //contact page
+@import "base/_variables.scss";
+
 $topspace:18vw;
-$styleColor:#f68b20;
 .pageBg_09 {
     position: relative;
 }
@@ -11,33 +12,51 @@ $styleColor:#f68b20;
     position: absolute;
     width: 40vw;
     top: $topspace;
-    left: 13vw; //  border: #9b1616 1px solid;
+    left: 13vw; 
     >div {
         text-align: left;
         margin-bottom: .5em;
-        border-bottom: 2px solid #9f9f9f;
+        border-bottom: 2px solid $grey;
         padding: 0.5em .5em;
         &:hover {
-            background-color: #000000;
-            border-bottom: 2px solid #f68b20;
+            background-color: $black;
+            border-bottom: 2px solid $primary;
             i {
                 color: #ffffff;
             }
         }
     }
+    input[type=text], textarea {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        padding: 3px 0px 3px 3px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid rgba(81, 203, 238, 0);
+      }
+    input[type=text]:focus, textarea:focus {
+        list-style: 2em;
+        box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+        padding: 3px 0px 3px 3px;
+        margin: 5px 1px 3px 0px;
+        border: 1px solid rgba(81, 203, 238, 0);
+      }
     button {
         clear: both;
     }
     .shield {
         input {
             width: 50%;
+       
         }
+       
         div {
             float: right;
-            background-color: #414141;
+            background-color: $darkGrey;
             width: auto;
             height: 1em;
-            ;
         }
     }
     .comment {
@@ -56,12 +75,10 @@ $styleColor:#f68b20;
     i {
         margin-right: 15px;
         margin-left: 10px;
-        color: #9f9f9f;
+        color:$grey;
     }
     input {
         height: 1em;
-        &:hover {}
-        &:active {}
     }
     input,
     textarea {
@@ -70,8 +87,6 @@ $styleColor:#f68b20;
         width: 70%;
         font-size: 1em;
         color: #fff;
-        &:hover {}
-        &:active {}
     }
 }
 
@@ -87,7 +102,7 @@ $styleColor:#f68b20;
         line-height: 70px;
     }
     div {
-        border: 1px solid #ffffff;
+        border: 1px solid ;
         border-radius: 60px;
         width: 70px;
         height: 70px;

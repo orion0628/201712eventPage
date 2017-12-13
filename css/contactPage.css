@@ -19,12 +19,31 @@
 }
 
 #contactForm > div:hover {
-  background-color: #000000;
+  background-color: #1f1f1f;
   border-bottom: 2px solid #f68b20;
 }
 
 #contactForm > div:hover i {
   color: #ffffff;
+}
+
+#contactForm input[type=text], #contactForm textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 0);
+}
+
+#contactForm input[type=text]:focus, #contactForm textarea:focus {
+  list-style: 2em;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 0);
 }
 
 #contactForm button {
@@ -37,7 +56,7 @@
 
 #contactForm .shield div {
   float: right;
-  background-color: #414141;
+  background-color: #868686;
   width: auto;
   height: 1em;
 }
@@ -92,7 +111,7 @@
 }
 
 #contactLink div {
-  border: 1px solid #ffffff;
+  border: 1px solid;
   border-radius: 60px;
   width: 70px;
   height: 70px;

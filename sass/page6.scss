@@ -1,3 +1,5 @@
+@import "base/variables";
+
 .title {
     position: absolute;
     width: 100%;
@@ -5,7 +7,7 @@
     left: 6%;
     z-index: 3;
     color: #FFF;
-    font-size: 24px;
+    font-size: $font-size-base;
     font-family: sans-serif;
     font-weight: lighter;
     text-align: left;
@@ -25,55 +27,75 @@
     left: 6%;
     z-index: 3;
     color: #FFF;
-    font-size: 20px;
-    font-family: sans-serif;
-    /* font-weight:bold; */
+    font-size: $font-size-base;
     text-align: left;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
     li {
-        padding-bottom: 25px;
+        border: 1px solid rgba(0,0,0,0);
+        vertical-align:middle;
+       line-height: 3em;
+        display: block;
+        letter-spacing: 0px;
+        width: 50%;
+        padding:0px 10px;
+        &:hover{
+            border: 1px solid $primary;
+            border-radius: 60px;       
+            
+        }
+        img{
+            vertical-align: middle !important;
+        }
         span {
             padding-left: 10px;
-            color: #f68c1f;
+            margin-top: -10px;
+            color: $primary;
             &.current {
-                color: #fff671;
-            }
-            &:hover {
-                color: #ffffff;
-                cursor: pointer;
+                color:$lightPrimary;
             }
         }
         i {
             padding-right: 12px;
         }
     }
+  
 }
+
+
 div.tabImg{
-    // border: 3px solid #e1e1e1;
-    margin-top: -150px;
+    margin-top: -20px;
 }
 .tabImg {
     position: absolute;
     width: 1366px;
     height: 1000px;
     right: 0px;
-    top: 0px      ;
-    // margin-left: -960px;
-    // margin-top: -500px;
+    top: 0px;
     background-repeat: no-repeat;
     background-position: right;
+    background-size: 65% auto;
+
+    &.tab1,&.tab2,&.tab3,&.tab4,&.tab5{
+       
+    } 
 
     &.tab1 {
         background-image: url(../images/tabShowImg1.png);
+        animation-name: mymove;
+        animation-duration: 1s;
     }
     &.tab2 {
         background-image: url(../images/tabShowImg2.png);
+        animation-name: mymove;
+        animation-duration: 1s;
     }
     &.tab3 {
         background-image: url(../images/tabShowImg3.png);
+        animation-name: mymove;
+        animation-duration: 1s;
     }
     &.tab4 {
         background-image: url(../images/tabShowImg4.png);
@@ -83,18 +105,14 @@ div.tabImg{
     }
 }
 
-// .tabImg.tab1{
-//   background: url(../images/tabShowImg1.png) no-repeat center 0;
-// }
-// .tabImg.tab2{
-//   background: url(../images/tabShowImg2.png) no-repeat center 0;
-// }
-// .tabImg.tab3{
-//   background: url(../images/tabShowImg3.png) no-repeat center 0;
-// }
-// .tabImg.tab4{
-//   background: url(../images/tabShowImg4.png) no-repeat center 0;
-// }
-// .tabImg.tab5{
-//   background: url(../images/tabShowImg5.png) no-repeat center 0;
-// }
+@keyframes mymove
+{
+from {right:-500px;}
+to {right:0px;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+    from {right:-500px;}
+    to {right:0px;}
+}

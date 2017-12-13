@@ -3146,7 +3146,7 @@ button {
   width: 173vh;
   margin-left: -87vh;
   height: 100%;
-  background-color: #1E1E1E;
+  background: #1f1f1f;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -3158,54 +3158,44 @@ div.section > div {
   width: 100%;
   height: 100%;
   min-height: 790px;
-  /*-500px*/
   background-size: auto 100%;
 }
 
 .pageBg_01 {
   background: url("../images/pageBg_01.jpg") no-repeat center;
-  height: 787px;
   display: block;
 }
 
 .pageBg_02 {
   background: url("../images/pageBg_02.jpg") no-repeat center 0;
-  height: 793px;
 }
 
 .pageBg_03 {
   background: url("../images/pageBg_03.jpg") no-repeat center 0;
-  height: 742px;
 }
 
 .pageBg_04 {
   background: url("../images/pageBg_04.jpg") no-repeat center 0;
-  height: 800px;
 }
 
 .pageBg_05 {
   background: url("../images/pageBg_05.jpg") no-repeat center 0;
-  height: 747px;
 }
 
 .pageBg_06 {
   background: url("../images/pageBg_06.jpg") no-repeat center 0;
-  height: 767px;
 }
 
 .pageBg_07 {
   background: url("../images/pageBg_07.jpg") no-repeat center 0;
-  height: 742px;
 }
 
 .pageBg_08 {
   background: url("../images/pageBg_08.jpg") no-repeat center 0;
-  height: 789px;
 }
 
 .pageBg_09 {
   background: url("../images/pageBg_09.jpg") no-repeat center 0;
-  height: 890px;
 }
 
 /* slider-bar */
@@ -3289,12 +3279,31 @@ div.section > div {
 }
 
 #contactForm > div:hover {
-  background-color: #000000;
+  background-color: #1f1f1f;
   border-bottom: 2px solid #f68b20;
 }
 
 #contactForm > div:hover i {
   color: #ffffff;
+}
+
+#contactForm input[type=text], #contactForm textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 0);
+}
+
+#contactForm input[type=text]:focus, #contactForm textarea:focus {
+  list-style: 2em;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 0);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 0);
 }
 
 #contactForm button {
@@ -3307,7 +3316,7 @@ div.section > div {
 
 #contactForm .shield div {
   float: right;
-  background-color: #414141;
+  background-color: #868686;
   width: auto;
   height: 1em;
 }
@@ -3362,7 +3371,7 @@ div.section > div {
 }
 
 #contactLink div {
-  border: 1px solid #ffffff;
+  border: 1px solid;
   border-radius: 60px;
   width: 70px;
   height: 70px;
@@ -3383,7 +3392,7 @@ div.section > div {
   left: 6%;
   z-index: 3;
   color: #FFF;
-  font-size: 24px;
+  font-size: 1.4em;
   font-family: sans-serif;
   font-weight: lighter;
   text-align: left;
@@ -3404,9 +3413,7 @@ div.section > div {
   left: 6%;
   z-index: 3;
   color: #FFF;
-  font-size: 20px;
-  font-family: sans-serif;
-  /* font-weight:bold; */
+  font-size: 1.4em;
   text-align: left;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -3415,21 +3422,32 @@ div.section > div {
 }
 
 .content li {
-  padding-bottom: 25px;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  line-height: 3em;
+  display: block;
+  letter-spacing: 0px;
+  width: 50%;
+  padding: 0px 10px;
+}
+
+.content li:hover {
+  border: 1px solid #f68b20;
+  border-radius: 60px;
+}
+
+.content li img {
+  vertical-align: middle !important;
 }
 
 .content li span {
   padding-left: 10px;
-  color: #f68c1f;
+  margin-top: -10px;
+  color: #f68b20;
 }
 
 .content li span.current {
-  color: #fff671;
-}
-
-.content li span:hover {
-  color: #ffffff;
-  cursor: pointer;
+  color: #f8a551;
 }
 
 .content li i {
@@ -3437,7 +3455,7 @@ div.section > div {
 }
 
 div.tabImg {
-  margin-top: -150px;
+  margin-top: -20px;
 }
 
 .tabImg {
@@ -3448,18 +3466,25 @@ div.tabImg {
   top: 0px;
   background-repeat: no-repeat;
   background-position: right;
+  background-size: 65% auto;
 }
 
 .tabImg.tab1 {
   background-image: url(../images/tabShowImg1.png);
+  animation-name: mymove;
+  animation-duration: 1s;
 }
 
 .tabImg.tab2 {
   background-image: url(../images/tabShowImg2.png);
+  animation-name: mymove;
+  animation-duration: 1s;
 }
 
 .tabImg.tab3 {
   background-image: url(../images/tabShowImg3.png);
+  animation-name: mymove;
+  animation-duration: 1s;
 }
 
 .tabImg.tab4 {
@@ -3468,4 +3493,22 @@ div.tabImg {
 
 .tabImg.tab5 {
   background-image: url(../images/tabShowImg5.png);
+}
+
+@keyframes mymove {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 0px;
+  }
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/ {
+  from {
+    right: -500px;
+  }
+  to {
+    right: 0px;
+  }
 }
