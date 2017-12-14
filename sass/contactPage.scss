@@ -1,7 +1,7 @@
 //contact page
 @import "base/_variables.scss";
 
-$topspace:18vw;
+$topspace:28vh;
 .pageBg_09 {
     position: relative;
 }
@@ -19,7 +19,7 @@ $topspace:18vw;
         border-bottom: 2px solid $grey;
         padding: 0.5em .5em;
         &:hover {
-            background-color: $black;
+            background-color: #101010;
             border-bottom: 2px solid $primary;
             i {
                 color: #ffffff;
@@ -49,12 +49,11 @@ $topspace:18vw;
     .shield {
         input {
             width: 50%;
-       
         }
        
         div {
             float: right;
-            background-color: $darkGrey;
+            background-color: #121212;
             width: auto;
             height: 1em;
         }

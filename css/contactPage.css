@@ -7,7 +7,7 @@
   font-size: 1.4em;
   position: absolute;
   width: 40vw;
-  top: 18vw;
+  top: 28vh;
   left: 13vw;
 }
 
@@ -19,7 +19,7 @@
 }
 
 #contactForm > div:hover {
-  background-color: #1f1f1f;
+  background-color: #101010;
   border-bottom: 2px solid #f68b20;
 }
 
@@ -56,7 +56,7 @@
 
 #contactForm .shield div {
   float: right;
-  background-color: #868686;
+  background-color: #121212;
   width: auto;
   height: 1em;
 }
@@ -101,7 +101,7 @@
   position: absolute;
   width: 25vw;
   height: 500px;
-  top: 18vw;
+  top: 28vh;
   right: 8%;
 }
 
