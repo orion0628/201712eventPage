@@ -131,7 +131,7 @@
 			allHeight = childSize * heightNum,
 			firstDom = doms.find('div:first'),
 			positionTop = Number(doms.attr('data-position'));
-			// console.log(positionTop);
+		// console.log(positionTop);
 
 		if (firstDom.is(':animated')) {
 			return;
@@ -212,7 +212,6 @@
 			allHeight = childSize * heightNum,
 			firstDom = doms.find('div:first'),
 			positionTop = Number(doms.attr('data-position'));
-console.log(childSize);
 
 		if (type == 'reset') {
 
@@ -501,7 +500,7 @@ console.log(childSize);
 		}
 	});
 
-
+	//section6:切換效果
 	$(".content ul li").on('mousemove', function (event) {
 		var x = event;
 		$(".content ul li").find('span').removeClass('current');
@@ -513,4 +512,8 @@ console.log(childSize);
 		$("#tabImg").addClass('tab' + ($(this).index() + 1));
 
 	});
+
+
+
+
 })(jQuery);
