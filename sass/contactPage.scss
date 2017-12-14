@@ -1,7 +1,7 @@
 //contact page
 @import "base/_variables.scss";
 
-$topspace:18vw;
+$topspace:13vw;
 .pageBg_09 {
     position: relative;
 }
@@ -12,7 +12,7 @@ $topspace:18vw;
     position: absolute;
     width: 40vw;
     top: $topspace;
-    left: 13vw; 
+    left: 10vw; 
     >div {
         text-align: left;
         margin-bottom: .5em;

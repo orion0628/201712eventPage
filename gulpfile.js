@@ -1,5 +1,6 @@
 // plugin  var
 var gulp = require('gulp'),
+    php  = require('gulp-connect-php');
     browserSync = require('browser-sync'),
     sass = require('gulp-sass'),
     bower = require('gulp-bower'),
@@ -87,4 +88,9 @@ gulp.task('static', ['styles'], function () {
 
 //執行指令
 
-gulp.task('default', ['static']);
+gulp.task('default', ['static', 'php']);
+
+
+gulp.task('php', function() {
+    php.server({ base: './app/captcha', port: 8010, keepalive: true});
+});
