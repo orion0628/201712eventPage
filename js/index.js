@@ -68,7 +68,7 @@
 	//屏幕滚动逻辑
 	bannerArea.mousewheel(function (event, delta, delyaX, delyaY) {
 		var deltaSpeed = delta;
-		console.log('sccc');
+		// console.log('sccc');
 		//console.log(event.deltaX, event.deltaY, event.deltaFactor);
 		//windowScroll(this, event, delyaY);
 		windowScroll(this, event, event.deltaY);
@@ -121,7 +121,7 @@
 
 	//屏幕滚动事件
 	windowScroll = function (dom, event, type) {
-		console.log('windowScroll');
+		// console.log('windowScroll');
 		var num = 0,
 			speedType = type,
 			doms = $(dom),
@@ -131,6 +131,7 @@
 			allHeight = childSize * heightNum,
 			firstDom = doms.find('div:first'),
 			positionTop = Number(doms.attr('data-position'));
+			// console.log(positionTop);
 
 		if (firstDom.is(':animated')) {
 			return;
@@ -211,7 +212,7 @@
 			allHeight = childSize * heightNum,
 			firstDom = doms.find('div:first'),
 			positionTop = Number(doms.attr('data-position'));
-
+console.log(childSize);
 
 		if (type == 'reset') {
 
@@ -259,7 +260,7 @@
 
 	//侧边栏点击
 	tagDom.bind('click', function () {
-		console.log('tagDom.bind');
+		// console.log('tagDom.bind');
 		var num = $(this).index();
 
 		animateScrollTo(num);
