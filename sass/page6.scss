@@ -1,5 +1,13 @@
 @import "base/variables";
 
+@mixin imgEff{
+    opacity: 1;
+    transition: 0.4s ease-out;
+}
+
+
+
+
 .title {
     position: absolute;
     width: 100%;
@@ -43,8 +51,7 @@
         padding:0px 10px;
         &:hover{
             border: 1px solid $primary;
-            border-radius: 60px;       
-            
+            border-radius: 60px;
         }
         img{
             vertical-align: middle !important;
@@ -77,42 +84,33 @@ div.tabImg{
     background-repeat: no-repeat;
     background-position: right;
     background-size: 65% auto;
-
-    &.tab1,&.tab2,&.tab3,&.tab4,&.tab5{
-       
-    } 
+    opacity: 0;
 
     &.tab1 {
         background-image: url(../images/tabShowImg1.png);
-        animation-name: mymove;
-        animation-duration: 1s;
+        @include imgEff;
     }
     &.tab2 {
         background-image: url(../images/tabShowImg2.png);
-        animation-name: mymove;
-        animation-duration: 1s;
+        @include imgEff;
     }
     &.tab3 {
         background-image: url(../images/tabShowImg3.png);
-        animation-name: mymove;
-        animation-duration: 1s;
+        @include imgEff;
+        
     }
     &.tab4 {
         background-image: url(../images/tabShowImg4.png);
+        @include imgEff;
+       
     }
     &.tab5 {
         background-image: url(../images/tabShowImg5.png);
+        @include imgEff;
     }
 }
 
-@keyframes mymove
-{
-from {right:-500px;}
-to {right:0px;}
-}
 
-@-webkit-keyframes mymove /*Safari and Chrome*/
-{
-    from {right:-500px;}
-    to {right:0px;}
-}
+
+
+

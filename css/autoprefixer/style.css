@@ -3467,54 +3467,35 @@ div.tabImg {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 65% auto;
+  opacity: 0;
 }
 
 .tabImg.tab1 {
   background-image: url(../images/tabShowImg1.png);
-  -webkit-animation-name: mymove;
-          animation-name: mymove;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  opacity: 1;
+  transition: 0.4s ease-out;
 }
 
 .tabImg.tab2 {
   background-image: url(../images/tabShowImg2.png);
-  -webkit-animation-name: mymove;
-          animation-name: mymove;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  opacity: 1;
+  transition: 0.4s ease-out;
 }
 
 .tabImg.tab3 {
   background-image: url(../images/tabShowImg3.png);
-  -webkit-animation-name: mymove;
-          animation-name: mymove;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  opacity: 1;
+  transition: 0.4s ease-out;
 }
 
 .tabImg.tab4 {
   background-image: url(../images/tabShowImg4.png);
+  opacity: 1;
+  transition: 0.4s ease-out;
 }
 
 .tabImg.tab5 {
   background-image: url(../images/tabShowImg5.png);
-}
-
-@keyframes mymove {
-  from {
-    right: -500px;
-  }
-  to {
-    right: 0px;
-  }
-}
-
-@-webkit-keyframes mymove /*Safari and Chrome*/ {
-  from {
-    right: -500px;
-  }
-  to {
-    right: 0px;
-  }
+  opacity: 1;
+  transition: 0.4s ease-out;
 }
