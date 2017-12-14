@@ -1,13 +1,5 @@
 @import "base/variables";
 
-@mixin imgEff{
-    opacity: 1;
-    transition: 0.4s ease-out;
-}
-
-
-
-
 .title {
     position: absolute;
     width: 100%;
@@ -71,7 +63,10 @@
   
 }
 
-
+@mixin imgEff{
+    opacity: 1;
+    transition: 0.4s ease-out;
+}
 div.tabImg{
     margin-top: -20px;
 }
@@ -97,12 +92,10 @@ div.tabImg{
     &.tab3 {
         background-image: url(../images/tabShowImg3.png);
         @include imgEff;
-        
     }
     &.tab4 {
         background-image: url(../images/tabShowImg4.png);
         @include imgEff;
-       
     }
     &.tab5 {
         background-image: url(../images/tabShowImg5.png);
