@@ -131,6 +131,7 @@
 			allHeight = childSize * heightNum,
 			firstDom = doms.find('div:first'),
 			positionTop = Number(doms.attr('data-position'));
+			// console.log(positionTop);
 
 		if (firstDom.is(':animated')) {
 			return;
@@ -211,7 +212,7 @@
 			allHeight = childSize * heightNum,
 			firstDom = doms.find('div:first'),
 			positionTop = Number(doms.attr('data-position'));
-
+console.log(childSize);
 
 		if (type == 'reset') {
 
