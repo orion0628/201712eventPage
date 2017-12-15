@@ -6,16 +6,20 @@
   text-align: center;
   font-size: 1.4em;
   position: absolute;
-  width: 40vw;
-  top: 28vh;
-  left: 13vw;
+  width: 70vh;
+  top: 27%;
+  left: 23vh;
 }
 
 #contactForm > div {
   text-align: left;
   margin-bottom: .5em;
   border-bottom: 2px solid #9f9f9f;
-  padding: 0.5em .5em;
+  padding: 0.2em .5em;
+}
+
+#contactForm > div img {
+  height: 1.4em;
 }
 
 #contactForm > div:hover {
@@ -99,10 +103,10 @@
 #contactLink {
   font-size: 1.6em;
   position: absolute;
-  width: 25vw;
+  width: 90vh;
   height: 500px;
-  top: 28vh;
-  right: 8%;
+  top: 27%;
+  left: 112vh;
 }
 
 #contactLink li {
