@@ -103,21 +103,21 @@
 		}
 
 		if (num == 0) {
-			nextButtonDom.html('凤凰新平台三大特性');
+			nextButtonDom.html('');
 		}
 
 		if (num == 1) {
-			nextButtonDom.html('凤凰娱乐十四年大事记');
+			nextButtonDom.html('');
 
 
 		}
 
 		if (num == 2) {
-			nextButtonDom.html('凤凰娱乐的优势');
+			nextButtonDom.html('');
 		}
 
 		if (num == 3) {
-			nextButtonDom.html('凤凰娱乐彩种介绍');
+			nextButtonDom.html('');
 		}
 
 

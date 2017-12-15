@@ -1,7 +1,7 @@
 //contact page
 @import "base/_variables.scss";
 
-$topspace:13vw;
+$topspace:27%;
 .pageBg_09 {
     position: relative;
 }
@@ -10,16 +10,19 @@ $topspace:13vw;
     text-align: center;
     font-size: 1.4em;
     position: absolute;
-    width: 40vw;
+    width: 70vh;
     top: $topspace;
-    left: 10vw; 
+    left: 23vh; 
     >div {
+        img{
+            height: 1.4em;
+        }
         text-align: left;
         margin-bottom: .5em;
         border-bottom: 2px solid $grey;
-        padding: 0.5em .5em;
+        padding: 0.2em .5em;
         &:hover {
-            background-color: $black;
+            background-color: #101010;
             border-bottom: 2px solid $primary;
             i {
                 color: #ffffff;
@@ -49,12 +52,11 @@ $topspace:13vw;
     .shield {
         input {
             width: 50%;
-       
         }
        
         div {
             float: right;
-            background-color: $darkGrey;
+            background-color: #121212;
             width: auto;
             height: 1em;
         }
@@ -93,10 +95,10 @@ $topspace:13vw;
 #contactLink {
     font-size: 1.6em;
     position: absolute;
-    width: 25vw;
+    width: 90vh;
     height: 500px;
     top: $topspace;
-    right: 8%;
+    left: 112vh;
     li {
         clear: left;
         line-height: 70px;

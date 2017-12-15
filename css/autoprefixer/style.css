@@ -3044,7 +3044,73 @@
 }
 
 /** * html5 reset*/
-html, body, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+html,
+body,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -3058,19 +3124,34 @@ body {
   line-height: 1;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
-nav, ul {
+nav,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: none;
 }
 
@@ -3091,7 +3172,8 @@ del {
   text-decoration: line-through;
 }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
@@ -3101,7 +3183,8 @@ table {
   border-spacing: 0;
 }
 
-input, select {
+input,
+select {
   vertical-align: middle;
 }
 
@@ -3120,7 +3203,8 @@ body {
   height: 100%;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   overflow: hidden;
 }
@@ -3273,20 +3357,24 @@ div.section > div {
   text-align: center;
   font-size: 1.4em;
   position: absolute;
-  width: 40vw;
-  top: 18vw;
-  left: 13vw;
+  width: 70vh;
+  top: 27%;
+  left: 23vh;
 }
 
 #contactForm > div {
   text-align: left;
   margin-bottom: .5em;
   border-bottom: 2px solid #9f9f9f;
-  padding: 0.5em .5em;
+  padding: 0.2em .5em;
+}
+
+#contactForm > div img {
+  height: 1.4em;
 }
 
 #contactForm > div:hover {
-  background-color: #1f1f1f;
+  background-color: #101010;
   border-bottom: 2px solid #f68b20;
 }
 
@@ -3323,7 +3411,7 @@ div.section > div {
 
 #contactForm .shield div {
   float: right;
-  background-color: #868686;
+  background-color: #121212;
   width: auto;
   height: 1em;
 }
@@ -3366,10 +3454,10 @@ div.section > div {
 #contactLink {
   font-size: 1.6em;
   position: absolute;
-  width: 25vw;
+  width: 90vh;
   height: 500px;
-  top: 18vw;
-  right: 8%;
+  top: 27%;
+  left: 112vh;
 }
 
 #contactLink li {
@@ -3395,7 +3483,7 @@ div.section > div {
 .title {
   position: absolute;
   width: 100%;
-  top: 36%;
+  top: 32%;
   left: 6%;
   z-index: 3;
   color: #FFF;
@@ -3424,12 +3512,13 @@ div.section > div {
 
 .content li {
   border: 1px solid transparent;
+  font-size: 0.8em;
   vertical-align: middle;
-  line-height: 3em;
+  line-height: 2.4em;
   display: block;
   letter-spacing: 0px;
-  width: 50%;
-  padding: 0px 10px;
+  width: 60%;
+  padding: 5px 20px;
 }
 
 .content li:hover {
@@ -3464,10 +3553,10 @@ div.tabImg {
   width: 1366px;
   height: 1000px;
   right: 0px;
-  top: 0px;
+  top: 8vh;
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 65% auto;
+  background-size: 78vh auto;
   opacity: 0;
 }
 
