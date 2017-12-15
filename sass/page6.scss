@@ -1,13 +1,15 @@
-@import "base/variables";
+.pageBg_06 {
+    font-size: 20px;
+    list-style: 1.4em;
+}
 
 .title {
     position: absolute;
     width: 100%;
-    top: 32%;
+    top: 30vh;
     left: 6%;
     z-index: 3;
     color: #FFF;
-    font-size: $font-size-base;
     font-family: sans-serif;
     font-weight: lighter;
     text-align: left;
@@ -16,72 +18,73 @@
     -o-transition: all .3s ease;
     transition: all .3s ease;
     li {
-        padding-bottom: 40px;
+        padding-bottom: 30px;
     }
 }
 
 .content {
     position: absolute;
     width: 100%;
-    top: 53%;
+    top: 48vh;
     left: 6%;
     z-index: 3;
     color: #FFF;
-    font-size: $font-size-base;
+    font-family: sans-serif;
+    /* font-weight:bold; */
+    
     text-align: left;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+    ul {
+        width: 60%;
+    }
     li {
-        border: 1px solid rgba(0,0,0,0);
-        font-size: 0.8em;
-        vertical-align:middle;
-       line-height: 2.4em;
+        border: 1px solid rgba(0, 0, 0, 0);
+        font-size: 14px;
+        vertical-align: middle;
         display: block;
         letter-spacing: 0px;
-        width: 60%;
-        padding:5px 20px;
-        &:hover{
-            border: 1px solid $primary;
+        padding: 5px 10px;
+        &:hover {
+            border: 1px solid #f68c1f;
             border-radius: 60px;
         }
-        img{
+        img {
             vertical-align: middle !important;
         }
         span {
-            padding-left: 10px;
-            margin-top: -10px;
-            color: $primary;
+            color: #f68c1f;
             &.current {
-                color:$lightPrimary;
+                color: #fff671;
+            }
+            &:hover {
+                color: #ffffff;
+                cursor: pointer;
             }
         }
         i {
             padding-right: 12px;
         }
     }
-  
 }
 
-@mixin imgEff{
+@mixin imgEff {
     opacity: 1;
     transition: 0.4s ease-out;
 }
-div.tabImg{
-    margin-top: -20px;
-}
+
 .tabImg {
     position: absolute;
-    width: 1366px;
-    height: 1000px;
+    width: 50%;
+    height: 100%;
     right: 0px;
-    top: 8vh;
+    top: 0px; // margin-left: -960px;
+    // margin-top: -500px;
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 78vh auto;
-    opacity: 0;
-
+    background-size: 100% auto;
     &.tab1 {
         background-image: url(../images/tabShowImg1.png);
         @include imgEff;
@@ -104,7 +107,46 @@ div.tabImg{
     }
 }
 
-
-
-
-
+@media screen and (min-width:320px) and (max-width:768px) {
+    .pageBg_06 {
+        font-size: 13px;
+        line-height: 14px;
+    }
+    div.section>div.pageBg_06 {
+        top: 0%;
+        height: 100%;
+        margin-top: 0vw;
+    }
+    .title {
+        top: 10vh;
+        li {
+            padding-bottom: 5px;
+        }
+    }
+    .content {
+        top: 60vh;
+        width: 90%;
+        font-size: 10px;
+        img{
+            width: 20px;
+        }
+        ul {
+            width: 100%;
+        }
+        li {
+            padding-bottom: 5px;
+            
+            i {
+                padding-right: 12px;
+            }
+        }
+    }
+    div.tabImg {
+        width: 100%;
+        height: 100vh;
+        right: 0px;
+        top: -8vh;
+        background-size: 80% auto;
+        background-position: center;
+    }
+}
