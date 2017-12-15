@@ -3,6 +3,11 @@
 	$('body').delegate('.video-btn', 'click', function () {
 		$('#video').show();
 	});
+
+	change_captcha();
+
+
+
 	var imgLoadNum = 0,
 		controlTag = false,
 		bannerArea = $('#J-banner-area'),
@@ -513,6 +518,144 @@
 
 	});
 
+
+	var WEBAPP = {
+
+		settings: {},
+		cache: {},
+
+		init: function () {
+
+			//DOM cache
+			this.cache.$form = $('#captcha-form');
+			this.cache.$refreshCaptcha = $('#refresh-captcha');
+			this.cache.$captchaImg = $('img#captcha');
+			this.cache.$captchaInput = $(':input[name="captchaTxt"]');
+
+			// this.setupValidation();
+
+		},
+
+		setupValidation: function () {
+			WEBAPP.cache.$form.validate({
+				onkeyup: false,
+				rules: {
+					"name": {
+						"required": true
+					},
+					"email": {
+						"required": true
+					},
+					"qq": {
+						"required": true
+					},
+					"website": {
+						"required": true
+					},
+					"comment": {
+						"required": true
+					},
+					"captchaTxt": {
+						"required": true,
+						"remote": function(){
+							var tt = {
+								url: 'http://localhost:8010/checkCaptcha.php',
+								type: "post",
+								data: {
+									code: function () {
+										return WEBAPP.cache.$captchaInput.val();
+									}
+								},
+								success: function (response)
+								{
+									console.log(response);
+								}
+							};
+
+							// console.log(tt);
+							// return false;
+						}
+					}
+				},
+				messages: {
+					"firstname": "Please enter your first name.",
+					"lastname": "Please enter your last name.",
+					"email": {
+						"required": "Please enter your email address.",
+						"email": "Please enter a valid email address."
+					},
+					"captcha": {
+						"required": "Please enter the verifcation code.",
+						"remote": "Verication code incorrect, please try again."
+					}
+				},
+				submitHandler: function (form) {
+					return false;
+					/* -------- AJAX SUBMIT ----------------------------------------------------- */
+
+					// var submitRequest = $.ajax({
+					// 	type: "POST",
+					// 	url: "http://localhost:8010/dummyScript.php",
+					// 	data: {
+					// 		// "data": WEBAPP.cache.$form.serialize()
+					// 	}
+					// });
+
+					// submitRequest.done(function (msg) {
+					// 	//success
+					// 	console.log('success');
+					// 	$('body').html('<h1>captcha correct, submit form success!</h1>');
+					// });
+
+					// submitRequest.fail(function (jqXHR, textStatus) {
+					// 	//fail
+					// 	console.log("fail - an error occurred: (" + textStatus + ").");
+					// });
+
+				}
+
+			});
+		}
+
+	}
+
+	function change_captcha() {
+		document.getElementById('captcha').src = "http://localhost:8010/get_captcha.php?rnd=" + Math.random();
+	}
+
+	WEBAPP.init();
+	//
+	$("#submitBtn").on('click', function (event) {
+		// console.log(WEBAPP.cache.$captchaInput.val());
+		// var x = {
+		// 	url: 'http://localhost:8010/checkCaptcha.php',
+		// 	type: "post",
+		// 	data: {
+		// 		code: function () {
+		// 			return WEBAPP.cache.$captchaInput.val();
+		// 		}
+		// 	}
+		// };
+
+		// console.log(x);
+
+		// $.ajax(
+		// 	{
+		// 			url: 'http://localhost:8010/checkCaptcha.php',
+		// 			type: 'POST',
+		// 			dataType: 'text',
+		// 			data: {code:'444'},
+		// 			success: function (response)
+		// 			{
+		// 				console.log(response);
+		// 			}
+		// 	});
+
+		// console.log(x);
+		// return false;
+		// console.log('submitBtn');
+		WEBAPP.setupValidation();
+	});
 
 
 
