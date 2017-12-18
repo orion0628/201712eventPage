@@ -99,47 +99,51 @@
 </div>
         <div class="section">
     <div class="pageBg_09">
-            <div id="contactForm">
+            <form action="#" method="post" id="captcha-form" name="captcha-form" autocomplete="off" class="form-horizontal" novalidate="novalidate">
+    
+<div id="contactForm">
     <div class="name">
         <span class="input-group-addon">
             <i class="fa fa-user-o"></i>
         </span>
-        <input type="text" placeholder="名称">
+        <input name="name"  type="text" placeholder="名称">
     </div>
     <div class="mail">
         <span class="input-group-addon">
             <i class="fa fa-envelope-o"></i>
         </span>
-        <input type="text" placeholder="电邮">
+        <input name="email" type="text" placeholder="电邮">
     </div>
     <div class="qq">
         <span class="input-group-addon">
             <i class="fa fa-qq"></i>
         </span>
-        <input type="text" placeholder="QQ">
+        <input name="qq" type="text" placeholder="QQ">
     </div>
     <div class="website">
         <span class="input-group-addon">
             <i class="fa fa-globe"></i>
         </span>
-        <input type="text" placeholder="公司网页">
+        <input name="website" type="text" placeholder="公司网页">
     </div>
     <div class="comment">
         <span class="input-group-addon">
             <i class="fa fa-commenting-o"></i>
         </span>
-        <textarea rows="2" name="S1" cols="20" placeholder="讯息"></textarea>
+        <textarea name="comment" rows="2" name="S1" cols="20" placeholder="讯息"></textarea>
     </div>
     <div class="shield">
         <span class="input-group-addon">
             <i class="fa fa-shield"></i>
         </span>
-        <input type="text" placeholder="请输入验证码">
-        <div><img src="images/kimg.jpg" alt="" id="captcha" /></div>
+        <input name="captchaTxt" type="text" class="code" placeholder="请输入验证码">
+        <div>
+            <img src="" alt="" id="captcha" />
+        </div>
     </div>
-    <button type="button">发送</button>
+    <button id="submitBtn" type="submit">发送</button>
 </div>
-
+</form>
 
 <div id="contactLink">
     <ul>
@@ -161,7 +165,7 @@
             <div class="">
                 <i class="fa fa-envelope fa-2x"></i>
             </div>
-            <a href="mailto:sales@orientalgame.com">sales@orientalgame.com</a>
+            <a href="mailto:sales@orientalgame.com"> sales@orientalgame.com</a>
         </li>
     </ul>
 </div>
@@ -172,6 +176,7 @@
     </div>
     <script type="text/javascript" src="js/plugin/jquery.min.js"></script>
     <script type="text/javascript" src="js/plugin/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="js/plugin/plugins.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
