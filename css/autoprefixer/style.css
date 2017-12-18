@@ -3242,56 +3242,85 @@ div.section > div {
   margin-left: -683px;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  div.section > div {
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    top: 50%;
-    height: 59vw;
-    margin-top: -30vw;
-    margin-left: 0;
-    background-size: 100% auto;
-  }
-}
-
 .pageBg_01 {
-  background: url("../images/info_01.png") no-repeat center 0;
+  background: url("../images/desk/info_01.png") no-repeat center 0;
 }
 
 .pageBg_02 {
-  background: url("../images/info_02.png") no-repeat center 0;
+  background: url("../images/desk/info_02.png") no-repeat center 0;
 }
 
 .pageBg_03 {
-  background: url("../images/info_03.png") no-repeat center 0;
+  background: url("../images/desk/info_03.png") no-repeat center 0;
 }
 
 .pageBg_04 {
-  background: url("../images/info_04.png") no-repeat center 0;
+  background: url("../images/desk/info_04.png") no-repeat center 0;
   height: 800px;
 }
 
 .pageBg_05 {
-  background: url("../images/info_05.png") no-repeat center 0;
+  background: url("../images/desk/info_05.png") no-repeat center 0;
 }
 
 .pageBg_06 {
-  background: url("../images/info_06.png") no-repeat center 0;
+  background: url("../images/desk/info_06.png") no-repeat center 0;
 }
 
 .pageBg_07 {
-  background: url("../images/info_07.png") no-repeat center 0;
+  background: url("../images/desk/info_07.png") no-repeat center 0;
 }
 
 .pageBg_08 {
-  background: url("../images/info_08.png") no-repeat center 0;
+  background: url("../images/desk/info_08.png") no-repeat center 0;
 }
 
 .pageBg_09 {
-  background: url("../images/info_09.png") no-repeat center 0;
+  background: url("../images/desk/info_09.png") no-repeat center 0;
 }
 
+@media screen and (min-width: 320px) and (max-width: 980px) {
+  div.section > div {
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    background-size: auto 90%;
+  }
+  .pageBg_01 {
+    background: url("../images/mobile/info_01.png") no-repeat center 0;
+  }
+  .pageBg_02 {
+    background: url("../images/mobile/info_02.png") no-repeat center 0;
+  }
+  .pageBg_03 {
+    background: url("../images/mobile/info_03.png") no-repeat center 0;
+  }
+  .pageBg_04 {
+    background: url("../images/mobile/info_04.png") no-repeat center 0;
+    height: 800px;
+  }
+  .pageBg_05 {
+    background: url("../images/mobile/info_05.png") no-repeat center 0;
+  }
+  .pageBg_06 {
+    background: url("../images/mobile/info_06.png") no-repeat center 0;
+  }
+  .pageBg_07 {
+    background: url("../images/mobile/info_07.png") no-repeat center 0;
+  }
+  .pageBg_08 {
+    background: url("../images/mobile/info_08.png") no-repeat center 0;
+  }
+  .pageBg_09 {
+    background: url("../images/mobile/info_09.png") no-repeat center 0;
+  }
+}
+
+/*佈局*/
 /* slider-bar */
 .slider-bar {
   position: absolute;
@@ -3361,6 +3390,7 @@ div.section > div {
           animation-iteration-count: infinite;
 }
 
+/**/
 .pageBg_09 {
   position: relative;
 }
@@ -3492,6 +3522,7 @@ div.section > div {
   font-size: 1.4em;
 }
 
+/*section9*/
 .pageBg_06 {
   font-size: 20px;
   list-style: 1.4em;
@@ -3538,6 +3569,7 @@ div.section > div {
   display: block;
   letter-spacing: 0px;
   padding: 5px 10px;
+  background-color: none;
 }
 
 .content li:hover {
@@ -3558,7 +3590,6 @@ div.section > div {
 }
 
 .content li span:hover {
-  color: #ffffff;
   cursor: pointer;
 }
 
@@ -3571,7 +3602,6 @@ div.section > div {
   width: 50%;
   height: 100%;
   right: 0px;
-  top: 0px;
   background-repeat: no-repeat;
   background-position: right;
   background-size: 100% auto;
@@ -3609,7 +3639,7 @@ div.section > div {
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .pageBg_06 {
-    font-size: 13px;
+    font-size: 6px;
     line-height: 14px;
   }
   div.section > div.pageBg_06 {
@@ -3618,15 +3648,12 @@ div.section > div {
     margin-top: 0vw;
   }
   .title {
-    top: 10vh;
-  }
-  .title li {
-    padding-bottom: 5px;
+    display: none;
   }
   .content {
-    top: 60vh;
+    top: 32%;
     width: 90%;
-    font-size: 10px;
+    font-size: 6px;
   }
   .content img {
     width: 20px;
@@ -3640,12 +3667,17 @@ div.section > div {
   .content li i {
     padding-right: 12px;
   }
+  .content li {
+    padding: 0px 10px;
+    font-size: 9px;
+  }
   div.tabImg {
     width: 100%;
     height: 100vh;
-    right: 0px;
-    top: -8vh;
+    bottom: 0px;
     background-size: 80% auto;
-    background-position: center;
+    background-position: center bottom;
   }
 }
+
+/*sction6*/
