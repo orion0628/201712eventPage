@@ -3523,6 +3523,7 @@ div.section > div {
 }
 
 .title {
+  display: none;
   position: absolute;
   width: 100%;
   top: 30vh;
