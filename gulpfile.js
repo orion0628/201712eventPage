@@ -1,6 +1,6 @@
 // plugin  var
 var gulp = require('gulp'),
-    php  = require('gulp-connect-php');
+    php = require('gulp-connect-php');
     browserSync = require('browser-sync'),
     sass = require('gulp-sass'),
     bower = require('gulp-bower'),
@@ -24,11 +24,11 @@ var web = {
         'app/**/*.html'
     ],
     images: [
-      'images/*'
+        'images/*'
     ],
     js: [
-      'js/*.js',
-      'js/**/*.js'
+        'js/*.js',
+        'js/**/*.js'
     ]
     // fonts: ['resources/assets/fonts/*', 'resources/assets/fonts/**/*'],
 };
@@ -73,32 +73,36 @@ gulp.task('fileinclude', function () {
 
 //broswerSync static
 gulp.task('static', ['styles'], function () {
-    browserSync.init({
+    browserSync.init(
+    {
+        port: 8201,
         server: {
             baseDir: "./",
+            
             index: "index.html"
         }
     });
+    php.server({ base: './app/php', port: 8202, keepalive: true});
     gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
     gulp.watch('css/*.css', ['autoprefixer']).on('change', reload); //watch  sass
-    gulp.watch(web.html , ['fileinclude']).on('change', reload); //watch html
+    gulp.watch(web.html, ['fileinclude']).on('change', reload); //watch html
     gulp.watch(web.images).on('change', reload); //watch images
     gulp.watch(web.js).on('change', reload); //watch images
 });
 
 //執行指令
-gulp.task('default', ['static', 'browser-sync']);
+gulp.task('default', ['static']);
 
 
-gulp.task('php', function() {
-    php.server({ base: './app/php', port: 8010, keepalive: true});
-});
+// gulp.task('php', function() {
+//     php.server({ base: './app/php', port: 8010, keepalive: true});
+// });
 
-gulp.task('browser-sync',['php'], function() {
-    browserSync({
-        proxy: '127.0.0.1:8010',
-        port: 8080,
-        open: true,
-        notify: false
-    });
-});
+// gulp.task('browser-sync',['php'], function() {
+//     browserSync({
+//         proxy: '127.0.0.1:8010',
+//         port: 8080,
+//         open: true,
+//         notify: false
+//     });
+// });
