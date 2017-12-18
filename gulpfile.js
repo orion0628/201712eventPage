@@ -87,18 +87,18 @@ gulp.task('static', ['styles'], function () {
 });
 
 //執行指令
-gulp.task('default', ['static', 'browser-sync']);
+gulp.task('default', ['static', 'php']);
 
 
 gulp.task('php', function() {
-    php.server({ base: './app/php', port: 8010, keepalive: true});
+    php.server({ base: './app/php', port: 8555, keepalive: true});
 });
 
-gulp.task('browser-sync',['php'], function() {
-    browserSync({
-        proxy: '127.0.0.1:8010',
-        port: 8080,
-        open: true,
-        notify: false
-    });
-});
+// gulp.task('browser-sync',['php'], function() {
+//     browserSync({
+//         proxy: '127.0.0.1:8010',
+//         port: 8080,
+//         open: true,
+//         notify: false
+//     });
+// });

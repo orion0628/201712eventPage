@@ -4,7 +4,7 @@
 		$('#video').show();
 	});
 
-	var phpUrl = "http://localhost:8010/";
+	var phpUrl = "http://localhost:8555/";
 	var imgLoadNum = 0,
 		controlTag = false,
 		bannerArea = $('#J-banner-area'),
