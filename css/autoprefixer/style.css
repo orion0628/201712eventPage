@@ -3678,6 +3678,40 @@ div.section > div {
     background-size: 80% auto;
     background-position: center bottom;
   }
+  .tabImg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% auto;
+  }
+  .tabImg.tab1 {
+    background-image: url(../images/mobile/tabShowImg1.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab2 {
+    background-image: url(../images/mobile/tabShowImg2.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab3 {
+    background-image: url(../images/mobile/tabShowImg3.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab4 {
+    background-image: url(../images/mobile/tabShowImg4.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab5 {
+    background-image: url(../images/mobile/tabShowImg5.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
 }
 
 /*sction6*/

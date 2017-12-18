@@ -31,7 +31,6 @@
     color: #FFF;
     font-family: sans-serif;
     /* font-weight:bold; */
-    
     text-align: left;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
@@ -80,9 +79,8 @@
     position: absolute;
     width: 50%;
     height: 100%;
-    right: 0px;
-    // top: 0px;
-     // margin-left: -960px;
+    right: 0px; // top: 0px;
+    // margin-left: -960px;
     // margin-top: -500px;
     background-repeat: no-repeat;
     background-position: right;
@@ -114,20 +112,19 @@
         font-size: 6px;
         line-height: 14px;
     }
-    div.section > div.pageBg_06 {
+    div.section>div.pageBg_06 {
         top: 0%;
         height: 100%;
         margin-top: 0vw;
     }
     .title {
         display: none;
-       
     }
     .content {
         top: 32%;
         width: 90%;
         font-size: 6px;
-        img{
+        img {
             width: 20px;
         }
         ul {
@@ -135,21 +132,51 @@
         }
         li {
             padding-bottom: 5px;
-            
             i {
                 padding-right: 12px;
             }
         }
         li {
             padding: 0px 10px;
-            font-size:9px;}
+            font-size: 9px;
+        }
     }
     div.tabImg {
         width: 100%;
-        height: 100vh;
-        // right: 0px;
+        height: 100vh; // right: 0px;
         bottom: 0px;
         background-size: 80% auto;
         background-position: center bottom;
+    }
+    .tabImg {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0px; // top: 0px;
+        // margin-left: -960px;
+        // margin-top: -500px;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 100% auto;
+        &.tab1 {
+            background-image: url(../images/mobile/tabShowImg1.png);
+            @include imgEff;
+        }
+        &.tab2 {
+            background-image: url(../images/mobile/tabShowImg2.png);
+            @include imgEff;
+        }
+        &.tab3 {
+            background-image: url(../images/mobile/tabShowImg3.png);
+            @include imgEff;
+        }
+        &.tab4 {
+            background-image: url(../images/mobile/tabShowImg4.png);
+            @include imgEff;
+        }
+        &.tab5 {
+            background-image: url(../images/mobile/tabShowImg5.png);
+            @include imgEff;
+        }
     }
 }
