@@ -4,10 +4,7 @@
 		$('#video').show();
 	});
 
-	change_captcha();
-
-
-
+	var phpUrl = "http://localhost:8010/";
 	var imgLoadNum = 0,
 		controlTag = false,
 		bannerArea = $('#J-banner-area'),
@@ -31,7 +28,6 @@
 
 		event = $.event.fix(orgEvent);
 		event.type = "mousewheel";
-
 
 		// Old school scrollwheel delta
 		if (event.wheelDelta) {
@@ -80,7 +76,6 @@
 		halt(event);
 	});
 
-
 	//滚动完成统一执行函数
 	doSomeThingAnimate = function (num) {
 		$('#video').hide();
@@ -108,8 +103,6 @@
 
 		if (num == 1) {
 			nextButtonDom.html('');
-
-
 		}
 
 		if (num == 2) {
@@ -119,8 +112,6 @@
 		if (num == 3) {
 			nextButtonDom.html('');
 		}
-
-
 	};
 
 
@@ -518,26 +509,46 @@
 
 	});
 
+	//亂數產生驗證碼
+	function makeid() {
+		var text = "";
+		var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+		for (var i = 0; i < 5; i++)
+			text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+		return text;
+	}
+
 
 	var WEBAPP = {
 
 		settings: {},
 		cache: {},
-
 		init: function () {
-
 			//DOM cache
 			this.cache.$form = $('#captcha-form');
 			this.cache.$refreshCaptcha = $('#refresh-captcha');
 			this.cache.$captchaImg = $('img#captcha');
 			this.cache.$captchaInput = $(':input[name="captchaTxt"]');
-
-			// this.setupValidation();
-
+			this.create_captcha();
+			this.Validation();
 		},
+		create_captcha: function () {
+			this.cache.captcha = makeid();
+			document.getElementById('captcha').src = phpUrl + "get_captcha_img.php?rnd=" + Math.random() + "&para=" + WEBAPP.cache.captcha;
+		},
+		Validation: function () {
+			$.validator.addMethod("check_captcha", function (value, element, options) {
+				var bothEmpty = (value.toLowerCase() == WEBAPP.cache.captcha.toLowerCase());
+				return bothEmpty;
+			}, "Verication incorrect!");
 
-		setupValidation: function () {
+
 			WEBAPP.cache.$form.validate({
+				// invalidHandler: function(event, validator) {
+				// 	change_captcha();
+				// },
 				onkeyup: false,
 				rules: {
 					"name": {
@@ -549,53 +560,35 @@
 					"qq": {
 						"required": true
 					},
-					"website": {
-						"required": true
-					},
 					"comment": {
 						"required": true
 					},
 					"captchaTxt": {
 						"required": true,
-						"remote": function(){
-							var tt = {
-								url: 'http://localhost:8010/checkCaptcha.php',
-								type: "post",
-								data: {
-									code: function () {
-										return WEBAPP.cache.$captchaInput.val();
-									}
-								},
-								success: function (response)
-								{
-									console.log(response);
-								}
-							};
-
-							// console.log(tt);
-							// return false;
-						}
+						"check_captcha": true
 					}
 				},
 				messages: {
-					"firstname": "Please enter your first name.",
-					"lastname": "Please enter your last name.",
+					"name": "Required!",
 					"email": {
-						"required": "Please enter your email address.",
-						"email": "Please enter a valid email address."
+						"required": "Required!",
+						"email": "Formate incorrect!"
 					},
-					"captcha": {
-						"required": "Please enter the verifcation code.",
-						"remote": "Verication code incorrect, please try again."
+					"qq": "Required!",
+					"comment": "Required!",
+					"captchaTxt": {
+						"required": "Required!",
+						// "check_captcha": "Verication code incorrect, please try again."
 					}
 				},
 				submitHandler: function (form) {
+					console.log(form);
 					return false;
 					/* -------- AJAX SUBMIT ----------------------------------------------------- */
 
 					// var submitRequest = $.ajax({
 					// 	type: "POST",
-					// 	url: "http://localhost:8010/dummyScript.php",
+					// 	url: phpUrl + "dummyScript.php",
 					// 	data: {
 					// 		// "data": WEBAPP.cache.$form.serialize()
 					// 	}
@@ -619,44 +612,6 @@
 
 	}
 
-	function change_captcha() {
-		document.getElementById('captcha').src = "http://localhost:8010/get_captcha.php?rnd=" + Math.random();
-	}
-
 	WEBAPP.init();
-	//
-	$("#submitBtn").on('click', function (event) {
-		// console.log(WEBAPP.cache.$captchaInput.val());
-		// var x = {
-		// 	url: 'http://localhost:8010/checkCaptcha.php',
-		// 	type: "post",
-		// 	data: {
-		// 		code: function () {
-		// 			return WEBAPP.cache.$captchaInput.val();
-		// 		}
-		// 	}
-		// };
-
-		// console.log(x);
-
-		// $.ajax(
-		// 	{
-		// 			url: 'http://localhost:8010/checkCaptcha.php',
-		// 			type: 'POST',
-		// 			dataType: 'text',
-		// 			data: {code:'444'},
-		// 			success: function (response)
-		// 			{
-		// 				console.log(response);
-		// 			}
-		// 	});
-
-		// console.log(x);
-		// return false;
-		// console.log('submitBtn');
-		WEBAPP.setupValidation();
-	});
-
-
 
 })(jQuery);
