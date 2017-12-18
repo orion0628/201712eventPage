@@ -3336,7 +3336,7 @@ div.section > div {
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .slider-bar {
-    left: 0px;
+    left: 5px;
   }
 }
 
@@ -3406,9 +3406,9 @@ div.section > div {
   text-align: center;
   font-size: 1.4em;
   position: absolute;
-  width: 70vh;
+  width: 650px;
   top: 27%;
-  left: 23vh;
+  left: 100px;
 }
 
 #contactForm > div {
@@ -3495,18 +3495,23 @@ div.section > div {
 #contactForm textarea {
   background-color: rgba(1, 1, 1, 0);
   border: none;
-  width: 70%;
+  width: 85%;
   font-size: 1em;
   color: #fff;
+}
+
+#contactForm textarea {
+  min-height: 50px;
+  resize: none;
 }
 
 #contactLink {
   font-size: 1.6em;
   position: absolute;
-  width: 90vh;
+  width: 400px;
   height: 500px;
   top: 27%;
-  left: 112vh;
+  right: 50px;
 }
 
 #contactLink li {
@@ -3527,6 +3532,44 @@ div.section > div {
 #contactLink i {
   margin-top: 25%;
   font-size: 1.4em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 980px) {
+  .pageBg_09 {
+    position: relative;
+  }
+  #contactForm {
+    font-size: 1rem;
+    width: 80%;
+    top: 50%;
+    left: 10%;
+    position: absolute;
+  }
+  #contactLink {
+    font-size: 1rem;
+    width: 100%;
+    height: auto;
+    top: 25%;
+    left: 10%;
+  }
+  #contactLink ul li {
+    float: left;
+    line-height: 1em;
+    width: 200px;
+  }
+  #contactLink div {
+    border: 1px solid;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px 10px 0px;
+    text-align: center;
+    float: left;
+  }
+  #contactLink i {
+    margin-top: 25%;
+    font-size: 1.4em;
+  }
 }
 
 /*section9*/

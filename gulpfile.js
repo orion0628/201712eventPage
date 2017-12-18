@@ -72,7 +72,7 @@ gulp.task('fileinclude', function () {
             prefix: '@@',
             basepath: '@file'
         }))
-        pipe(sourcemaps.write('./'))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'));
 });
 
