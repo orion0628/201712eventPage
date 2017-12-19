@@ -4,7 +4,7 @@
 		$('#video').show();
 	});
 
-	var phpUrl = "http://127.0.0.1:8202/";
+	var phpUrl = "http://192.168.128.118:8202/";
 	var imgLoadNum = 0,
 		controlTag = false,
 		bannerArea = $('#J-banner-area'),
@@ -520,9 +520,7 @@
 		return text;
 	}
 
-
 	var WEBAPP = {
-
 		settings: {},
 		cache: {},
 		init: function () {
@@ -539,16 +537,13 @@
 			document.getElementById('captcha').src = phpUrl + "get_captcha_img.php?rnd=" + Math.random() + "&para=" + WEBAPP.cache.captcha;
 		},
 		Validation: function () {
+
 			$.validator.addMethod("check_captcha", function (value, element, options) {
 				var bothEmpty = (value.toLowerCase() == WEBAPP.cache.captcha.toLowerCase());
 				return bothEmpty;
 			}, "Verication incorrect!");
 
-
 			WEBAPP.cache.$form.validate({
-				// invalidHandler: function(event, validator) {
-				// 	change_captcha();
-				// },
 				onkeyup: false,
 				rules: {
 					"name": {
@@ -578,40 +573,37 @@
 					"comment": "Required!",
 					"captchaTxt": {
 						"required": "Required!",
-						// "check_captcha": "Verication code incorrect, please try again."
+						"check_captcha": "Incorrect!"
 					}
 				},
 				submitHandler: function (form) {
-					console.log(form);
-					return false;
-					/* -------- AJAX SUBMIT ----------------------------------------------------- */
-
-					// var submitRequest = $.ajax({
+					console.log("submit: " + $(form).serialize());
+					// $.ajax({
 					// 	type: "POST",
-					// 	url: phpUrl + "dummyScript.php",
-					// 	data: {
-					// 		// "data": WEBAPP.cache.$form.serialize()
+					// 	data: $(form).serialize(),
+					// 	url: phpUrl + "PHPMailer/mail.php",
+					// 	success: function (e) {
+					// 		alert('sucess!');
+					// 		return false;
+					// 	},
+					// 	error: function () {
+					// 		$('#contact').fadeTo("slow", 0.15, function () {
+					// 			$('#error').fadeIn();
+					// 			return false;
+					// 		});
 					// 	}
 					// });
-
-					// submitRequest.done(function (msg) {
-					// 	//success
-					// 	console.log('success');
-					// 	$('body').html('<h1>captcha correct, submit form success!</h1>');
-					// });
-
-					// submitRequest.fail(function (jqXHR, textStatus) {
-					// 	//fail
-					// 	console.log("fail - an error occurred: (" + textStatus + ").");
-					// });
-
+					// console.log($(form).serialize());
+					return false;
 				}
-
 			});
 		}
-
 	}
 
 	WEBAPP.init();
+
+	$('#captcha').click(function () {
+		WEBAPP.create_captcha();
+	});
 
 })(jQuery);
