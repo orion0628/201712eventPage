@@ -3221,6 +3221,7 @@ button {
   color: #ffffff;
   border: 0px;
   font-size: 1em;
+  margin-top: 2em;
 }
 
 .section {
@@ -3413,7 +3414,7 @@ div.section > div {
 
 #contactForm > div {
   text-align: left;
-  margin-bottom: .5em;
+  margin-bottom: .3em;
   border-bottom: 2px solid #9f9f9f;
   padding: 0.2em .5em;
 }
@@ -3429,6 +3430,16 @@ div.section > div {
 
 #contactForm > div:hover i {
   color: #ffffff;
+}
+
+#contactForm label {
+  font-style: normal;
+  font-size: 0.6em;
+  color: #ff0000;
+  clear: both;
+  display: block;
+  position: absolute;
+  right: 0px;
 }
 
 #contactForm input[type=text], #contactForm textarea {
@@ -3471,14 +3482,17 @@ div.section > div {
 }
 
 #contactForm .comment span {
-  position: absolute;
   top: 10px;
 }
 
 #contactForm .comment textarea {
   position: absolute;
-  left: 64px;
   height: 4em;
+}
+
+#contactForm .comment label {
+  position: absolute;
+  bottom: 7px;
 }
 
 #contactForm i {
@@ -3519,12 +3533,20 @@ div.section > div {
   line-height: 70px;
 }
 
+#contactLink li.email .mobile {
+  display: none;
+}
+
+#contactLink li.email .desk {
+  display: block;
+}
+
 #contactLink div {
-  border: 1px solid;
+  border: 1px solid #ffffff;
   border-radius: 60px;
   width: 70px;
   height: 70px;
-  margin: 0px 20px 20px 0px;
+  margin: 0px 10px 20px 0px;
   text-align: center;
   float: left;
 }
@@ -3539,36 +3561,66 @@ div.section > div {
     position: relative;
   }
   #contactForm {
-    font-size: 1rem;
+    font-size: 0.9em;
+    font-style: normal;
     width: 80%;
-    top: 50%;
+    top: 35%;
     left: 10%;
     position: absolute;
   }
+  #contactForm > div {
+    text-align: left;
+    margin-bottom: 0em;
+    padding: 0.6em 0em;
+  }
+  #contactForm > div:hover {
+    background-color: rgba(1, 1, 1, 0);
+  }
+  #contactForm .comment {
+    height: 70px;
+  }
+  #contactForm input,
+  #contactForm textarea {
+    background-color: rgba(1, 1, 1, 0);
+    border: none;
+    width: 75%;
+    font-size: 1em;
+    color: #fff;
+  }
   #contactLink {
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 100%;
     height: auto;
-    top: 25%;
+    top: 22%;
     left: 10%;
   }
   #contactLink ul li {
     float: left;
-    line-height: 1em;
-    width: 200px;
+    line-height: 2em;
+    width: 180px;
+    clear: none;
+  }
+  #contactLink ul li.email .mobile {
+    display: block;
+  }
+  #contactLink ul li.email .desk {
+    display: none;
   }
   #contactLink div {
-    border: 1px solid;
     border-radius: 20px;
-    width: 30px;
-    height: 30px;
-    margin: 0px 10px 10px 0px;
+    width: 1.6em;
+    height: 1.6em;
+    padding: 5px;
     text-align: center;
     float: left;
+    margin-top: -5px;
   }
   #contactLink i {
-    margin-top: 25%;
+    margin-top: 0;
     font-size: 1.4em;
+  }
+  #contactLink a {
+    font-size: 0.8em;
   }
 }
 

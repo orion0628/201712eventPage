@@ -18,7 +18,7 @@ $topspace:27%;
             height: 1.4em;
         }
         text-align: left;
-        margin-bottom: .5em;
+        margin-bottom: .3em;
         border-bottom: 2px solid $grey;
         padding: 0.2em .5em;
         &:hover {
@@ -29,6 +29,17 @@ $topspace:27%;
             }
         }
     }
+
+    label{
+        font-style: normal;
+        font-size: 0.6em;
+        color: #ff0000;
+        clear: both;
+        display: block;
+        position: absolute;
+        right: 0px;
+    }
+    
     input[type=text], textarea {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
@@ -65,13 +76,17 @@ $topspace:27%;
         height: 100px;
         position: relative;
         span {
-            position: absolute;
+            // position: absolute;
             top: 10px;
         }
         textarea {
             position: absolute;
-            left: 64px;
+            // left: 40px;
             height: 4em;
+        }
+        label{
+            position: absolute;
+            bottom: 7px;
         }
     }
     i {
@@ -105,13 +120,15 @@ $topspace:27%;
     li {
         clear: left;
         line-height: 70px;
+        &.email .mobile{display: none;}
+        &.email .desk{display: block;}
     }
     div {
-        border: 1px solid ;
+        border: 1px solid #ffffff;
         border-radius: 60px;
         width: 70px;
         height: 70px;
-        margin: 0px 20px 20px 0px;
+        margin: 0px 10px 20px 0px;
         text-align: center;
         float: left;
     }
@@ -126,37 +143,69 @@ $topspace:27%;
         position: relative;
     }
     #contactForm {
-        font-size: 1rem;
+        font-size: 0.9em;
+        font-style: normal;
         width: 80%;
-        top: 50%;
+        top:35%;
         left:10%; 
         position: absolute;
+
+        >div {
+           
+            text-align: left;
+            margin-bottom: 0em;
+            
+            padding: 0.6em 0em;
+            &:hover {
+                background-color:rgba(1, 1, 1, 0);
+                
+            }
+        }
+        
+        .comment{
+            height: 70px;
+        }
+        input,
+    textarea {
+        background-color: rgba(1, 1, 1, 0);
+        border: none;
+        width: 75%;
+        font-size: 1em;
+        color: #fff;
         
     }
+    }
     #contactLink {
-        font-size: 1rem;
+        font-size: 0.9rem;
         width: 100%;
         height: auto;
-        top:25%;
+        top:22%;
         left: 10%;
         // position: relative;
         ul li {
             float: left;
-            line-height: 1em;
-            width: 200px;
+            line-height: 2em;
+            width: 180px;
+            clear: none;
+            // margin: 10px;
+            &.email .mobile{display: block;}
+        &.email .desk{display: none;}
         }
-        div {
-            border: 1px solid ;
-            border-radius: 20px;
-            width: 30px;
-            height: 30px;
-            margin: 0px 10px 10px 0px;
+        div { border-radius: 20px;
+            width: 1.6em;
+            height: 1.6em;
+            padding: 5px;
             text-align: center;
             float: left;
+            margin-top: -5px;
         }
         i {
-            margin-top: 25%;
+            margin-top:0;
             font-size: 1.4em;
         }
+        a{
+            font-size: 0.8em;
+        }
+
     }
 }
