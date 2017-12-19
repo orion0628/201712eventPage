@@ -1,6 +1,5 @@
 //contact page
 @import "../base/_variables.scss";
-
 $topspace:27%;
 .pageBg_09 {
     position: relative;
@@ -12,9 +11,9 @@ $topspace:27%;
     position: absolute;
     width: 650px;
     top: $topspace;
-    left:100px; 
+    left: 100px;
     >div {
-        img{
+        img {
             height: 1.4em;
         }
         text-align: left;
@@ -29,8 +28,7 @@ $topspace:27%;
             }
         }
     }
-
-    label{
+    label {
         font-style: normal;
         font-size: 0.6em;
         color: #ff0000;
@@ -39,8 +37,8 @@ $topspace:27%;
         position: absolute;
         right: 0px;
     }
-    
-    input[type=text], textarea {
+    input[type=text],
+    textarea {
         -webkit-transition: all 0.30s ease-in-out;
         -moz-transition: all 0.30s ease-in-out;
         -ms-transition: all 0.30s ease-in-out;
@@ -49,14 +47,15 @@ $topspace:27%;
         padding: 3px 0px 3px 3px;
         margin: 5px 1px 3px 0px;
         border: 1px solid rgba(81, 203, 238, 0);
-      }
-    input[type=text]:focus, textarea:focus {
+    }
+    input[type=text]:focus,
+    textarea:focus {
         list-style: 2em;
         box-shadow: 0 0 5px rgba(81, 203, 238, 0);
         padding: 3px 0px 3px 3px;
         margin: 5px 1px 3px 0px;
         border: 1px solid rgba(81, 203, 238, 0);
-      }
+    }
     button {
         clear: both;
     }
@@ -64,7 +63,6 @@ $topspace:27%;
         input {
             width: 50%;
         }
-       
         div {
             float: right;
             background-color: #121212;
@@ -80,11 +78,10 @@ $topspace:27%;
             top: 10px;
         }
         textarea {
-            position: absolute;
-            // left: 40px;
+            position: absolute; // left: 40px;
             height: 4em;
         }
-        label{
+        label {
             position: absolute;
             bottom: 7px;
         }
@@ -92,7 +89,7 @@ $topspace:27%;
     i {
         margin-right: 15px;
         margin-left: 10px;
-        color:$grey;
+        color: $grey;
     }
     input {
         height: 1em;
@@ -104,9 +101,10 @@ $topspace:27%;
         width: 85%;
         font-size: 1em;
         color: #fff;
-        
     }
-    textarea {min-height: 50px;resize: none;
+    textarea {
+        min-height: 50px;
+        resize: none;
     }
 }
 
@@ -120,8 +118,12 @@ $topspace:27%;
     li {
         clear: left;
         line-height: 70px;
-        &.email .mobile{display: none;}
-        &.email .desk{display: block;}
+        &.email .mobile {
+            display: none;
+        }
+        &.email .desk {
+            display: block;
+        }
     }
     div {
         border: 1px solid #ffffff;
@@ -138,7 +140,7 @@ $topspace:27%;
     }
 }
 
-@media screen and (min-width:320px) and (max-width:980px) {
+@media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max) {
     .pageBg_09 {
         position: relative;
     }
@@ -146,52 +148,49 @@ $topspace:27%;
         font-size: 0.9em;
         font-style: normal;
         width: 80%;
-        top:35%;
-        left:10%; 
+        top: 35%;
+        left: 10%;
         position: absolute;
-
         >div {
-           
             text-align: left;
             margin-bottom: 0em;
-            
             padding: 0.6em 0em;
             &:hover {
-                background-color:rgba(1, 1, 1, 0);
-                
+                background-color: rgba(1, 1, 1, 0);
             }
         }
-        
-        .comment{
+        .comment {
             height: 70px;
         }
         input,
-    textarea {
-        background-color: rgba(1, 1, 1, 0);
-        border: none;
-        width: 75%;
-        font-size: 1em;
-        color: #fff;
-        
-    }
+        textarea {
+            background-color: rgba(1, 1, 1, 0);
+            border: none;
+            width: 75%;
+            font-size: 1em;
+            color: #fff;
+        }
     }
     #contactLink {
         font-size: 0.9rem;
         width: 100%;
         height: auto;
-        top:22%;
+        top: 22%;
         left: 10%;
-        // position: relative;
         ul li {
             float: left;
             line-height: 2em;
             width: 180px;
             clear: none;
-            // margin: 10px;
-            &.email .mobile{display: block;}
-        &.email .desk{display: none;}
+            &.email .mobile {
+                display: block;
+            }
+            &.email .desk {
+                display: none;
+            }
         }
-        div { border-radius: 20px;
+        div {
+            border-radius: 20px;
             width: 1.6em;
             height: 1.6em;
             padding: 5px;
@@ -200,12 +199,11 @@ $topspace:27%;
             margin-top: -5px;
         }
         i {
-            margin-top:0;
+            margin-top: 0;
             font-size: 1.4em;
         }
-        a{
+        a {
             font-size: 0.8em;
         }
-
     }
 }
