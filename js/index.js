@@ -556,7 +556,7 @@
 						"required": true
 					},
 					"comment": {
-						"requir/ed": true
+						"required": true
 					},
 					"captchaTxt": {
 						"required": true,
@@ -577,8 +577,25 @@
 					}
 				},
 				submitHandler: function (form) {
+					console.log("submit: " + $(form).serialize());
+					// $.ajax({
+					// 	type: "POST",
+					// 	data: $(form).serialize(),
+					// 	url: phpUrl + "PHPMailer/mail.php",
+					// 	success: function (e) {
+					// 		alert('sucess!');
+					// 		return false;
+					// 	},
+					// 	error: function () {
+					// 		$('#contact').fadeTo("slow", 0.15, function () {
+					// 			$('#error').fadeIn();
+					// 			return false;
+					// 		});
+					// 	}
+					// });
+					// console.log($(form).serialize());
 					return false;
-				}					
+				}
 			});
 		}
 	}
@@ -588,33 +605,5 @@
 	$('#captcha').click(function () {
 		WEBAPP.create_captcha();
 	});
-
-	$('#submitBtn').click(function () {
-
-		WEBAPP.Validation();
-		return false;
-		var form = WEBAPP.cache.$form;
-
-		// $.ajax({
-		// 	type: "POST",
-		// 	data: $(form).serialize(),
-		// 	url: phpUrl + "PHPMailer/mail.php",
-		// 	success: function (e) {
-		// 		alert('sucess!');
-		// 		return false;
-		// 	},
-		// 	error: function () {
-		// 		$('#contact').fadeTo("slow", 0.15, function () {
-		// 			$('#error').fadeIn();
-		// 			return false;
-		// 		});
-		// 	}
-		// });
-
-		// console.log($(form).serialize());
-		return false;
-
-	});
-
 
 })(jQuery);
