@@ -78,11 +78,10 @@ gulp.task('static', ['styles'], function () {
         port: 8201,
         server: {
             baseDir: "./",
-            
             index: "index.html"
         }
     });
-    php.server({ base: './app/php', port: 8202, keepalive: true});
+    // php.server({ base: './app/php', port: 8202, keepalive: true});
     gulp.watch(web.sass, ['styles']).on('change', reload); //watch  sass
     gulp.watch('css/*.css', ['autoprefixer']).on('change', reload); //watch  sass
     gulp.watch(web.html, ['fileinclude']).on('change', reload); //watch html
