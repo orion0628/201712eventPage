@@ -14,7 +14,9 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
-  
+  @media screen and (min-width:320px) and (max-width:768px) {
+    .slider-bar {left: 5px;}
+  }
   .slider-bar a {
     display: block;
     width: 12px;

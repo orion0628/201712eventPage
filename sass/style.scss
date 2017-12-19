@@ -2,7 +2,8 @@
 @import "base/setting";
 @import "base/variables";
 
-@import "layout.scss";
-@import "slider.scss";
-@import "contactPage.scss";
-@import "Page6.scss";
+@import "partials/layout";/*佈局*/
+@import "partials/slider";/**/
+@import "partials/contactPage";/*section9*/
+@import "partials/Page6";/*sction6*/
+

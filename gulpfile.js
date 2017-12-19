@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     fileinclude = require('gulp-file-include'),
+    sourcemaps = require('gulp-sourcemaps'), //scss css map
     gulpPlumber = require('gulp-plumber');
 
 // common
@@ -50,13 +51,17 @@ gulp.task('autoprefixer', function () {
 gulp.task('styles', function () {
     gulp.src(web.sass) //要處理的scss檔案
         //  .pipe(gulpPlumber())
+        .pipe(sourcemaps.init()) // scss map
         .pipe(sass().on('error', sass.logError))
         .pipe(sass({
             outputStyle: 'expanded' // compact , expanded, nested
         }))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('css')) //指定編譯後的路徑
 
 });
+
+
 //========
 //html template / app(可以自己改名稱)/*.html
 //========
@@ -67,6 +72,7 @@ gulp.task('fileinclude', function () {
             prefix: '@@',
             basepath: '@file'
         }))
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'));
 });
 

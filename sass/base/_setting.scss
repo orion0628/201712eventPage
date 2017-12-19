@@ -148,16 +148,17 @@ select {
 
 body {
     background: #1f1f1f;
-    font-size: 1em;
-    line-height: 0em;
+    font-size: 16px;
+    line-height: 0px;
     color: #ffffff;
-    font-family: 'Noto Sans SC Sliced', 'Noto Sans SC', sans-serif;
+    background-color: #1E1E1E;
+    background-image: url("../images/Artboard1.jpg");
+    background-size: 100% auto;
+    font-family: 'cwTeXHei', Arial, Helvetica, sans-serif;
+  
 }
 
 .wrapper {
-    margin-left: 50vw;
-    width: 100%;
-    min-width: 1366px;
     height: 100%;
 }
 
@@ -184,4 +185,5 @@ button {
     color: #ffffff;
     border: 0px;
     font-size: 1em;
+    margin-top: 2em;
 }

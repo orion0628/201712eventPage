@@ -1,0 +1,198 @@
+.pageBg_06 {
+    font-size: 20px;
+    list-style: 1.4em;
+}
+
+.title {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 30vh;
+    left: 6%;
+    z-index: 3;
+    color: #FFF;
+    font-family: sans-serif;
+    font-weight: lighter;
+    text-align: left;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    li {
+        padding-bottom: 30px;
+    }
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 40%; // margin-top: -500px;
+    left: 6%;
+    z-index: 3;
+    color: #FFF;
+    font-family: sans-serif;
+    /* font-weight:bold; */
+    text-align: left;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    ul {
+        width: 60%;
+    }
+    li {
+        border: 1px solid rgba(0, 0, 0, 0);
+        font-size: 14px;
+        vertical-align: middle;
+        display: block;
+        letter-spacing: 0px;
+        padding: 5px 10px;
+        background-color: none;
+        &:hover {
+            border: 1px solid #f68c1f;
+            border-radius: 60px;
+        }
+        img {
+            vertical-align: middle !important;
+        }
+        span {
+            color: #f68c1f;
+            &.current {
+                color: #fff671;
+            }
+            &:hover {
+                // color: #ffffff;
+                cursor: pointer;
+            }
+        }
+        i {
+            padding-right: 12px;
+        }
+    }
+}
+
+@mixin imgEff {
+    opacity: 1;
+    transition: 0.4s ease-out;
+}
+
+.tabImg {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0px; // top: 0px;
+    // margin-left: -960px;
+    // margin-top: -500px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% auto;
+    &.tab1 {
+        background-image: url(../images/tabShowImg1.png);
+        @include imgEff;
+    }
+    &.tab2 {
+        background-image: url(../images/tabShowImg2.png);
+        @include imgEff;
+    }
+    &.tab3 {
+        background-image: url(../images/tabShowImg3.png);
+        @include imgEff;
+    }
+    &.tab4 {
+        background-image: url(../images/tabShowImg4.png);
+        @include imgEff;
+    }
+    &.tab5 {
+        background-image: url(../images/tabShowImg5.png);
+        @include imgEff;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:980px) {
+    div.section>div.pageBg_06 {
+        top: 0%;
+        height: 100%;
+        margin-top: 0vw;
+    }
+    .title {
+        display: none;
+    }
+    .content {
+        top: 40%;
+        width: 90%;
+        span {
+            font-size: 8px;
+        }
+        img {
+            width: 20px;
+        }
+        ul {
+            width: 100%;
+        }
+        li {
+            font-size: 11px;
+            padding: 0px 10px;
+            line-height: 2em;
+            i {
+                padding-right: 12px;
+            }
+        }
+    }
+    div.tabImg {
+        height: 100%; // right: 0px;
+        bottom: 0px;
+        background-size: 100% auto;
+        background-position: center bottom;
+    }
+    .tabImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0px;
+        background-repeat: no-repeat; // background-size: 100% auto;
+        &.tab1 {
+            background-image: url(../images/mobile/tabShowImg1.png);
+            @include imgEff;
+        }
+        &.tab2 {
+            background-image: url(../images/mobile/tabShowImg2.png);
+            @include imgEff;
+        }
+        &.tab3 {
+            background-image: url(../images/mobile/tabShowImg3.png);
+            @include imgEff;
+        }
+        &.tab4 {
+            background-image: url(../images/mobile/tabShowImg4.png);
+            @include imgEff;
+        }
+        &.tab5 {
+            background-image: url(../images/mobile/tabShowImg5.png);
+            @include imgEff;
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:980px) and (orientation: Landscape) {
+    div.tabImg {
+        height: 100%; // right: 0px;
+        bottom: 0px;
+        background-size: 60% auto;
+        background-position: 120% bottom;
+    }
+    .content {
+        top: 40%;
+        width: 90%;
+        ul {
+            width: 60%;
+        }
+        li {
+            // font-size:6px;
+            padding: 0px 10px;
+            line-height: 2em;
+            i {
+                padding-right: 12px;
+            }
+        }
+    }
+}

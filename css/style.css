@@ -3194,16 +3194,16 @@ select {
 
 body {
   background: #1f1f1f;
-  font-size: 1em;
-  line-height: 0em;
+  font-size: 16px;
+  line-height: 0px;
   color: #ffffff;
-  font-family: 'Noto Sans SC Sliced', 'Noto Sans SC', sans-serif;
+  background-color: #1E1E1E;
+  background-image: url("../images/Artboard1.jpg");
+  background-size: 100% auto;
+  font-family: 'cwTeXHei', Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
-  margin-left: 50vw;
-  width: 100%;
-  min-width: 1366px;
   height: 100%;
 }
 
@@ -3224,15 +3224,13 @@ button {
   color: #ffffff;
   border: 0px;
   font-size: 1em;
+  margin-top: 2em;
 }
 
 .section {
   position: relative;
-  width: 173vh;
-  margin-left: -87vh;
+  width: 100%;
   height: 100%;
-  background: #1f1f1f;
-  overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   transition: all 1s ease;
@@ -3240,49 +3238,94 @@ button {
 
 div.section > div {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  min-height: 790px;
-  background-size: auto 100%;
+  top: 50%;
+  left: 50%;
+  width: 1366px;
+  height: 790px;
+  margin-top: -395px;
+  margin-left: -683px;
 }
 
 .pageBg_01 {
-  background: url("../images/pageBg_01.jpg") no-repeat center;
-  display: block;
+  background: url("../images/desk/info_01.png") no-repeat center 0;
 }
 
 .pageBg_02 {
-  background: url("../images/pageBg_02.jpg") no-repeat center 0;
+  background: url("../images/desk/info_02.png") no-repeat center 0;
 }
 
 .pageBg_03 {
-  background: url("../images/pageBg_03.jpg") no-repeat center 0;
+  background: url("../images/desk/info_03.png") no-repeat center 0;
 }
 
 .pageBg_04 {
-  background: url("../images/pageBg_04.jpg") no-repeat center 0;
+  background: url("../images/desk/info_04.png") no-repeat center 0;
+  height: 800px;
 }
 
 .pageBg_05 {
-  background: url("../images/pageBg_05.jpg") no-repeat center 0;
+  background: url("../images/desk/info_05.png") no-repeat center 0;
 }
 
 .pageBg_06 {
-  background: url("../images/pageBg_06.jpg") no-repeat center 0;
+  background: url("../images/desk/info_06.png") no-repeat center 0;
 }
 
 .pageBg_07 {
-  background: url("../images/pageBg_07.jpg") no-repeat center 0;
+  background: url("../images/desk/info_07.png") no-repeat center 0;
 }
 
 .pageBg_08 {
-  background: url("../images/pageBg_08.jpg") no-repeat center 0;
+  background: url("../images/desk/info_08.png") no-repeat center 0;
 }
 
 .pageBg_09 {
-  background: url("../images/pageBg_09.jpg") no-repeat center 0;
+  background: url("../images/desk/info_09.png") no-repeat center 0;
 }
 
+@media screen and (min-width: 320px) and (max-width: 980px) {
+  div.section > div {
+    top: 0;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    background-size: auto 90%;
+    background-position: center center;
+  }
+  .pageBg_01 {
+    background: url("../images/mobile/info_01.png") no-repeat center 0;
+  }
+  .pageBg_02 {
+    background: url("../images/mobile/info_02.png") no-repeat center 0;
+  }
+  .pageBg_03 {
+    background: url("../images/mobile/info_03.png") no-repeat center 0;
+  }
+  .pageBg_04 {
+    background: url("../images/mobile/info_04.png") no-repeat center 0;
+    height: 800px;
+  }
+  .pageBg_05 {
+    background: url("../images/mobile/info_05.png") no-repeat center 0;
+  }
+  .pageBg_06 {
+    background: url("../images/mobile/info_06.png") no-repeat center 0;
+  }
+  .pageBg_07 {
+    background: url("../images/mobile/info_07.png") no-repeat center 0;
+  }
+  .pageBg_08 {
+    background: url("../images/mobile/info_08.png") no-repeat center 0;
+  }
+  .pageBg_09 {
+    background: url("../images/mobile/info_09.png") no-repeat center 0;
+  }
+}
+
+/*佈局*/
 /* slider-bar */
 .slider-bar {
   position: absolute;
@@ -3296,6 +3339,12 @@ div.section > div {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .slider-bar {
+    left: 5px;
+  }
 }
 
 .slider-bar a {
@@ -3343,6 +3392,7 @@ div.section > div {
   animation-iteration-count: infinite;
 }
 
+/**/
 .pageBg_09 {
   position: relative;
 }
@@ -3351,14 +3401,14 @@ div.section > div {
   text-align: center;
   font-size: 1.4em;
   position: absolute;
-  width: 70vh;
+  width: 650px;
   top: 27%;
-  left: 23vh;
+  left: 100px;
 }
 
 #contactForm > div {
   text-align: left;
-  margin-bottom: .5em;
+  margin-bottom: .3em;
   border-bottom: 2px solid #9f9f9f;
   padding: 0.2em .5em;
 }
@@ -3374,6 +3424,16 @@ div.section > div {
 
 #contactForm > div:hover i {
   color: #ffffff;
+}
+
+#contactForm label {
+  font-style: normal;
+  font-size: 0.6em;
+  color: #ff0000;
+  clear: both;
+  display: block;
+  position: absolute;
+  right: 0px;
 }
 
 #contactForm input[type=text], #contactForm textarea {
@@ -3416,14 +3476,17 @@ div.section > div {
 }
 
 #contactForm .comment span {
-  position: absolute;
   top: 10px;
 }
 
 #contactForm .comment textarea {
   position: absolute;
-  left: 64px;
   height: 4em;
+}
+
+#contactForm .comment label {
+  position: absolute;
+  bottom: 7px;
 }
 
 #contactForm i {
@@ -3440,18 +3503,23 @@ div.section > div {
 #contactForm textarea {
   background-color: rgba(1, 1, 1, 0);
   border: none;
-  width: 70%;
+  width: 85%;
   font-size: 1em;
   color: #fff;
+}
+
+#contactForm textarea {
+  min-height: 50px;
+  resize: none;
 }
 
 #contactLink {
   font-size: 1.6em;
   position: absolute;
-  width: 90vh;
+  width: 400px;
   height: 500px;
   top: 27%;
-  left: 112vh;
+  right: 50px;
 }
 
 #contactLink li {
@@ -3459,12 +3527,20 @@ div.section > div {
   line-height: 70px;
 }
 
+#contactLink li.email .mobile {
+  display: none;
+}
+
+#contactLink li.email .desk {
+  display: block;
+}
+
 #contactLink div {
-  border: 1px solid;
+  border: 1px solid #ffffff;
   border-radius: 60px;
   width: 70px;
   height: 70px;
-  margin: 0px 20px 20px 0px;
+  margin: 0px 10px 20px 0px;
   text-align: center;
   float: left;
 }
@@ -3474,14 +3550,88 @@ div.section > div {
   font-size: 1.4em;
 }
 
+@media screen and (min-width: 320px) and (max-width: 980px) {
+  .pageBg_09 {
+    position: relative;
+  }
+  #contactForm {
+    font-size: 0.9em;
+    font-style: normal;
+    width: 80%;
+    top: 35%;
+    left: 10%;
+    position: absolute;
+  }
+  #contactForm > div {
+    text-align: left;
+    margin-bottom: 0em;
+    padding: 0.6em 0em;
+  }
+  #contactForm > div:hover {
+    background-color: rgba(1, 1, 1, 0);
+  }
+  #contactForm .comment {
+    height: 70px;
+  }
+  #contactForm input,
+  #contactForm textarea {
+    background-color: rgba(1, 1, 1, 0);
+    border: none;
+    width: 75%;
+    font-size: 1em;
+    color: #fff;
+  }
+  #contactLink {
+    font-size: 0.9rem;
+    width: 100%;
+    height: auto;
+    top: 22%;
+    left: 10%;
+  }
+  #contactLink ul li {
+    float: left;
+    line-height: 2em;
+    width: 180px;
+    clear: none;
+  }
+  #contactLink ul li.email .mobile {
+    display: block;
+  }
+  #contactLink ul li.email .desk {
+    display: none;
+  }
+  #contactLink div {
+    border-radius: 20px;
+    width: 1.6em;
+    height: 1.6em;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    margin-top: -5px;
+  }
+  #contactLink i {
+    margin-top: 0;
+    font-size: 1.4em;
+  }
+  #contactLink a {
+    font-size: 0.8em;
+  }
+}
+
+/*section9*/
+.pageBg_06 {
+  font-size: 20px;
+  list-style: 1.4em;
+}
+
 .title {
+  display: none;
   position: absolute;
   width: 100%;
-  top: 32%;
+  top: 30vh;
   left: 6%;
   z-index: 3;
   color: #FFF;
-  font-size: 1.4em;
   font-family: sans-serif;
   font-weight: lighter;
   text-align: left;
@@ -3492,17 +3642,18 @@ div.section > div {
 }
 
 .title li {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .content {
   position: absolute;
   width: 100%;
-  top: 53%;
+  top: 40%;
   left: 6%;
   z-index: 3;
   color: #FFF;
-  font-size: 1.4em;
+  font-family: sans-serif;
+  /* font-weight:bold; */
   text-align: left;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -3510,19 +3661,22 @@ div.section > div {
   transition: all .3s ease;
 }
 
+.content ul {
+  width: 60%;
+}
+
 .content li {
   border: 1px solid transparent;
-  font-size: 0.8em;
+  font-size: 14px;
   vertical-align: middle;
-  line-height: 2.4em;
   display: block;
   letter-spacing: 0px;
-  width: 60%;
-  padding: 5px 20px;
+  padding: 5px 10px;
+  background-color: none;
 }
 
 .content li:hover {
-  border: 1px solid #f68b20;
+  border: 1px solid #f68c1f;
   border-radius: 60px;
 }
 
@@ -3531,33 +3685,29 @@ div.section > div {
 }
 
 .content li span {
-  padding-left: 10px;
-  margin-top: -10px;
-  color: #f68b20;
+  color: #f68c1f;
 }
 
 .content li span.current {
-  color: #f8a551;
+  color: #fff671;
+}
+
+.content li span:hover {
+  cursor: pointer;
 }
 
 .content li i {
   padding-right: 12px;
 }
 
-div.tabImg {
-  margin-top: -20px;
-}
-
 .tabImg {
   position: absolute;
-  width: 1366px;
-  height: 1000px;
+  width: 50%;
+  height: 100%;
   right: 0px;
-  top: 8vh;
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 78vh auto;
-  opacity: 0;
+  background-size: 100% auto;
 }
 
 .tabImg.tab1 {
@@ -3589,3 +3739,100 @@ div.tabImg {
   opacity: 1;
   transition: 0.4s ease-out;
 }
+
+@media screen and (min-width: 320px) and (max-width: 980px) {
+  div.section > div.pageBg_06 {
+    top: 0%;
+    height: 100%;
+    margin-top: 0vw;
+  }
+  .title {
+    display: none;
+  }
+  .content {
+    top: 40%;
+    width: 90%;
+  }
+  .content span {
+    font-size: 8px;
+  }
+  .content img {
+    width: 20px;
+  }
+  .content ul {
+    width: 100%;
+  }
+  .content li {
+    font-size: 11px;
+    padding: 0px 10px;
+    line-height: 2em;
+  }
+  .content li i {
+    padding-right: 12px;
+  }
+  div.tabImg {
+    height: 100%;
+    bottom: 0px;
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+  .tabImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    background-repeat: no-repeat;
+  }
+  .tabImg.tab1 {
+    background-image: url(../images/mobile/tabShowImg1.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab2 {
+    background-image: url(../images/mobile/tabShowImg2.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab3 {
+    background-image: url(../images/mobile/tabShowImg3.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab4 {
+    background-image: url(../images/mobile/tabShowImg4.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+  .tabImg.tab5 {
+    background-image: url(../images/mobile/tabShowImg5.png);
+    opacity: 1;
+    transition: 0.4s ease-out;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 980px) and (orientation: Landscape) {
+  div.tabImg {
+    height: 100%;
+    bottom: 0px;
+    background-size: 60% auto;
+    background-position: 120% bottom;
+  }
+  .content {
+    top: 40%;
+    width: 90%;
+  }
+  .content ul {
+    width: 60%;
+  }
+  .content li {
+    padding: 0px 10px;
+    line-height: 2em;
+  }
+  .content li i {
+    padding-right: 12px;
+  }
+}
+
+/*sction6*/
+
+/*# sourceMappingURL=style.css.map */
