@@ -24,6 +24,19 @@
 		halt(event);
 	});
 
+	//點擊側邊攔
+	tagDom.bind('click', function () {
+		console.log('click');
+		moveAction = 'click';
+		var num = $(this).index();
+		animateScrollTo(num);
+	});
+
+	//手機點擊側邊攔
+	tagDom.on('click touchstart', function () {
+		var num = $(this).index();
+		animateScrollTo(num);
+	});
 
 	//手機觸碰滑動 --start
 	var lastY,
@@ -52,11 +65,12 @@
 		if (down > 0 && currentIdx < length)
 			idx = currentIdx + 1;
 
-		tagDom.eq(idx).click();
+		animateScrollTo(idx);
+
 		currentIdx = idx;
 		up = 0;
 		down = 0;
-		console.log('end: ' + idx);
+		// console.log('end: ' + idx);
 		e.preventDefault()
 	});
 	//手機觸碰滑動 --end
@@ -196,11 +210,6 @@
 		siderBalControl(doms.attr('data-position'));
 	};
 
-	//點擊側邊攔
-	tagDom.bind('click', function () {
-		var num = $(this).index();
-		animateScrollTo(num);
-	});
 
 	//屏幕尺寸改变
 	$(window).resize(function (event) {
