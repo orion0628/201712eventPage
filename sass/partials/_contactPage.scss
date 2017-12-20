@@ -170,7 +170,6 @@ $topspace:27%;
             font-size: 1em;
             color: #fff;
         }
-   
     }
     #contactLink {
         font-size: 0.9rem;
@@ -207,26 +206,27 @@ $topspace:27%;
             font-size: 0.8em;
         }
     }
-    
 }
-    @media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max) and (orientation: Landscape) {
-        #contactForm {
-            text-align: center;
-            font-size: .9em;
-            position: absolute;
-            width: 40%;
-            top: $topspace;
-            left: 10%;
-            >div {
-                padding: 0em 0em;
-                
-            }
-        }
-        #contactLink {
-            position: absolute;
-            width: 20%;
-            height: 500px;
-            top: $topspace;
-            right: 0px;
+
+@media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max) and (orientation: Landscape) {
+    #contactForm {
+        text-align: center;
+        font-size: .9em;
+        position: absolute;
+        width: 40%;
+        top: $topspace;
+        left: 10%;
+        >div {
+            padding: 0em 0em;
         }
     }
+    #contactLink {
+        position: absolute;
+        width: 20%;
+        height: 500px;
+        top: $topspace;
+        left: 65%;
+        right: 0px;
+        left: 65%;
+    }
+}
