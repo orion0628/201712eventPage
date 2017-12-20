@@ -3283,7 +3283,7 @@ div.section > div {
   background: url("../images/desk/info_09.png") no-repeat center 0;
 }
 
-@media screen and (min-width: 320px) and (max-width: 980px) {
+@media screen and (min-width: 320px) and (max-width: 991px) {
   div.section > div {
     top: 0;
     bottom: 0px;
@@ -3292,8 +3292,8 @@ div.section > div {
     height: 100%;
     margin-top: 0;
     margin-left: 0;
-    background-size: auto 90%;
-    background-position: center center;
+    background-size: 100% auto;
+    background-position: center left;
   }
   .pageBg_01 {
     background: url("../images/mobile/info_01.png") no-repeat center 0;
@@ -3313,6 +3313,7 @@ div.section > div {
   }
   .pageBg_06 {
     background: url("../images/mobile/info_06.png") no-repeat center 0;
+    background-position: center top !important;
   }
   .pageBg_07 {
     background: url("../images/mobile/info_07.png") no-repeat center 0;
@@ -3321,7 +3322,43 @@ div.section > div {
     background: url("../images/mobile/info_08.png") no-repeat center 0;
   }
   .pageBg_09 {
-    background: url("../images/mobile/info_09.png") no-repeat center 0;
+    background: url("../images/mobile/info_09.png") no-repeat;
+    background-position: center top !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) and (orientation: Landscape) {
+  div.section > div {
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  .pageBg_01 {
+    background: url("../images/desk/info_01.png") no-repeat center 0;
+  }
+  .pageBg_02 {
+    background: url("../images/desk/info_02.png") no-repeat center 0;
+  }
+  .pageBg_03 {
+    background: url("../images/desk/info_03.png") no-repeat center 0;
+  }
+  .pageBg_04 {
+    background: url("../images/desk/info_04.png") no-repeat center 0;
+    height: 800px;
+  }
+  .pageBg_05 {
+    background: url("../images/desk/info_05.png") no-repeat center 0;
+  }
+  .pageBg_06 {
+    background: url("../images/desk/info_06.png") no-repeat center 0;
+  }
+  .pageBg_07 {
+    background: url("../images/desk/info_07.png") no-repeat center 0;
+  }
+  .pageBg_08 {
+    background: url("../images/desk/info_08.png") no-repeat center 0;
+  }
+  .pageBg_09 {
+    background: url("../images/desk/info_09.png") no-repeat center 0;
   }
 }
 
@@ -3429,14 +3466,15 @@ div.section > div {
 #contactForm label {
   font-style: normal;
   font-size: 0.6em;
-  color: #ff0000;
+  color: #b00000;
   clear: both;
   display: block;
   position: absolute;
   right: 0px;
 }
 
-#contactForm input[type=text], #contactForm textarea {
+#contactForm input[type=text],
+#contactForm textarea {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -3447,7 +3485,8 @@ div.section > div {
   border: 1px solid rgba(81, 203, 238, 0);
 }
 
-#contactForm input[type=text]:focus, #contactForm textarea:focus {
+#contactForm input[type=text]:focus,
+#contactForm textarea:focus {
   list-style: 2em;
   box-shadow: 0 0 5px rgba(81, 203, 238, 0);
   padding: 3px 0px 3px 3px;
@@ -3509,7 +3548,7 @@ div.section > div {
 }
 
 #contactForm textarea {
-  min-height: 50px;
+  min-height: 40px;
   resize: none;
 }
 
@@ -3550,7 +3589,7 @@ div.section > div {
   font-size: 1.4em;
 }
 
-@media screen and (min-width: 320px) and (max-width: 980px) {
+@media screen and (min-width: 320px) and (max-width: 991px) {
   .pageBg_09 {
     position: relative;
   }
@@ -3558,20 +3597,20 @@ div.section > div {
     font-size: 0.9em;
     font-style: normal;
     width: 80%;
-    top: 35%;
+    top: 32%;
     left: 10%;
     position: absolute;
   }
   #contactForm > div {
     text-align: left;
     margin-bottom: 0em;
-    padding: 0.6em 0em;
+    padding: .5em 0em;
   }
   #contactForm > div:hover {
     background-color: rgba(1, 1, 1, 0);
   }
   #contactForm .comment {
-    height: 70px;
+    height: 60px;
   }
   #contactForm input,
   #contactForm textarea {
@@ -3585,7 +3624,7 @@ div.section > div {
     font-size: 0.9rem;
     width: 100%;
     height: auto;
-    top: 22%;
+    top: 17%;
     left: 10%;
   }
   #contactLink ul li {
@@ -3615,6 +3654,27 @@ div.section > div {
   }
   #contactLink a {
     font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) and (orientation: Landscape) {
+  #contactForm {
+    text-align: center;
+    font-size: .9em;
+    position: absolute;
+    width: 40%;
+    top: 27%;
+    left: 10%;
+  }
+  #contactForm > div {
+    padding: 0em 0em;
+  }
+  #contactLink {
+    position: absolute;
+    width: 20%;
+    height: 500px;
+    top: 27%;
+    right: 0px;
   }
 }
 
@@ -3740,7 +3800,7 @@ div.section > div {
   transition: 0.4s ease-out;
 }
 
-@media screen and (min-width: 320px) and (max-width: 980px) {
+@media screen and (min-width: 320px) and (max-width: 991px) {
   div.section > div.pageBg_06 {
     top: 0%;
     height: 100%;
@@ -3750,7 +3810,7 @@ div.section > div {
     display: none;
   }
   .content {
-    top: 40%;
+    top: 35%;
     width: 90%;
   }
   .content span {
@@ -3810,7 +3870,7 @@ div.section > div {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 980px) and (orientation: Landscape) {
+@media screen and (min-width: 320px) and (max-width: 991px) and (orientation: Landscape) {
   div.tabImg {
     height: 100%;
     bottom: 0px;
@@ -3818,7 +3878,7 @@ div.section > div {
     background-position: 120% bottom;
   }
   .content {
-    top: 40%;
+    top: 30%;
     width: 90%;
   }
   .content ul {

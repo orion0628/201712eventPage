@@ -1,3 +1,4 @@
+@import "../base/_variables.scss";
 .pageBg_06 {
     font-size: 20px;
     list-style: 1.4em;
@@ -108,7 +109,7 @@
     }
 }
 
-@media screen and (min-width:320px) and (max-width:980px) {
+@media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max)  {
     div.section>div.pageBg_06 {
         top: 0%;
         height: 100%;
@@ -118,7 +119,7 @@
         display: none;
     }
     .content {
-        top: 40%;
+        top: 35%;
         width: 90%;
         span {
             font-size: 8px;
@@ -172,16 +173,15 @@
         }
     }
 }
-
-@media screen and (min-width:320px) and (max-width:980px) and (orientation: Landscape) {
+@media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max) and (orientation: Landscape) {
     div.tabImg {
-        height: 100%; // right: 0px;
+        height: 100%;
         bottom: 0px;
         background-size: 60% auto;
         background-position: 120% bottom;
     }
     .content {
-        top: 40%;
+        top: 30%;
         width: 90%;
         ul {
             width: 60%;
