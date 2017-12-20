@@ -173,10 +173,9 @@
         }
     }
 }
-
 @media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max) and (orientation: Landscape) {
     div.tabImg {
-        height: 100%; // right: 0px;
+        height: 100%;
         bottom: 0px;
         background-size: 60% auto;
         background-position: 120% bottom;
