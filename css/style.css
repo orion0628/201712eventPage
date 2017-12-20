@@ -3224,7 +3224,7 @@ button {
   color: #ffffff;
   border: 0px;
   font-size: 1em;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .section {
@@ -3674,7 +3674,9 @@ div.section > div {
     width: 20%;
     height: 500px;
     top: 27%;
+    left: 65%;
     right: 0px;
+    left: 65%;
   }
 }
 
@@ -3722,7 +3724,7 @@ div.section > div {
 }
 
 .content ul {
-  width: 60%;
+  width: 50%;
 }
 
 .content li {
