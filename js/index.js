@@ -21,21 +21,19 @@
 	//滑鼠滾動
 	bannerArea.mousewheel(function (event, delta, delyaX, delyaY) {
 		windowScroll(this, event, event.deltaY);
+		// console.log(event.deltaY);
 		halt(event);
 	});
 
 	//點擊側邊攔
 	tagDom.bind('click', function () {
-		console.log('click');
-		moveAction = 'click';
 		var num = $(this).index();
 		animateScrollTo(num);
 	});
 
 	//手機點擊側邊攔
 	tagDom.on('click touchstart', function () {
-		var num = $(this).index();
-		animateScrollTo(num);
+		idx = $(this).index();
 	});
 
 	//手機觸碰滑動 --start
@@ -60,24 +58,23 @@
 	});
 
 	$(document).bind('touchend', function (e) {
+		var action = -1;
 		if (up > 0 && currentIdx > 0)
 			idx = currentIdx - 1;
 		if (down > 0 && currentIdx < length)
 			idx = currentIdx + 1;
 
 		animateScrollTo(idx);
-
 		currentIdx = idx;
 		up = 0;
 		down = 0;
-		// console.log('end: ' + idx);
 		e.preventDefault()
 	});
 	//手機觸碰滑動 --end
 
 	//螢幕滾動事件
 	windowScroll = function (dom, event, type) {
-		// console.log('windowScroll');
+		// console.log(type);
 		var num = 0,
 			speedType = type,
 			doms = $(dom),
@@ -121,32 +118,27 @@
 
 			num = -(positionTop + heightNum) / heightNum;
 			doms.attr('data-position', positionTop + heightNum);
-
 		} else {
 
 			if (positionTop == -(allHeight - heightNum)) {
 				return;
 			}
-
 			// if (isIe69()) {
 			// 	firstDom.animate({
 			// 		marginTop: positionTop - heightNum
 			// 	}, 1000, 'easeOutCubic');
 			// } else {
-
 			if (controlTag) {
 				return;
 			}
 
 			controlTag = true;
-
 			firstDom.css('marginTop', positionTop - heightNum);
 
 			setTimeout(function () {
 				controlTag = false;
 			}, 1000);
 			// }
-
 			num = -(positionTop - heightNum) / heightNum;
 			doms.attr('data-position', positionTop - heightNum);
 		}
@@ -160,6 +152,7 @@
 
 	//滾動動畫切換
 	animateScrollTo = function (num, type) {
+		console.log('ani: ' + num);
 		var doms = bannerArea,
 			chiildDom = doms.children(),
 			childSize = chiildDom.size(),
