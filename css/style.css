@@ -3292,8 +3292,8 @@ div.section > div {
     height: 100%;
     margin-top: 0;
     margin-left: 0;
-    background-size: 100% auto;
-    background-position: center left;
+    background-size: 99% auto;
+    background-position: center right;
   }
   .pageBg_01 {
     background: url("../images/mobile/info_01.png") no-repeat center 0;
@@ -3380,7 +3380,7 @@ div.section > div {
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .slider-bar {
-    left: 5px;
+    left: 8px;
   }
 }
 
@@ -3388,7 +3388,7 @@ div.section > div {
   display: block;
   width: 12px;
   height: 12px;
-  margin: 0 auto 12px;
+  margin: 0 auto 16px;
   border: 2px solid #a0a3a2;
   border-radius: 50%;
   overflow: hidden;
@@ -3896,5 +3896,33 @@ div.section > div {
 }
 
 /*sction6*/
+.pageBg_06 {
+  position: relative;
+}
+
+.btn_joinus {
+  position: absolute;
+  background-image: url(../images/btn_joinus-0.png);
+  width: 460px;
+  height: 70px;
+  top: 68%;
+  left: 10%;
+}
+
+.btn_joinus:hover {
+  background-image: url(../images/btn_joinus-1.png);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 991px) {
+  .btn_joinus {
+    width: 460px;
+    height: 70px;
+    top: 45%;
+    left: 10%;
+  }
+}
+
+/*sction8*/
 
 /*# sourceMappingURL=style.css.map */

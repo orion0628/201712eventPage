@@ -15,13 +15,13 @@
     transition: all 0.5s ease;
   }
   @media screen and (min-width:320px) and (max-width:768px) {
-    .slider-bar {left: 5px;}
+    .slider-bar {left: 8px;}
   }
   .slider-bar a {
     display: block;
     width: 12px;
     height: 12px;
-    margin: 0 auto 12px;
+    margin: 0 auto 16px;
     border: 2px solid #a0a3a2;
     // background-color: #FFF;
     border-radius: 50%;
