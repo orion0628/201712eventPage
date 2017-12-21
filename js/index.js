@@ -7,7 +7,8 @@
 		siderBarDom = $('#sliderBar'),
 		heightNum = $(window).height(),
 		length = siderBarDom.children('a').length,
-		tagDom = siderBarDom.find('a');
+		tagDom = siderBarDom.find('a'),
+		btn_joinus = $('.btn_joinus');
 
 	// isIe69 = function() {
 	// 	return BrowserDetect['browser'] == 'Explorer' && BrowserDetect['version'] < 10;
@@ -63,7 +64,6 @@
 			idx = currentIdx - 1;
 		if (down > 0 && currentIdx < length)
 			idx = currentIdx + 1;
-
 		animateScrollTo(idx);
 		currentIdx = idx;
 		up = 0;
@@ -152,7 +152,7 @@
 
 	//滾動動畫切換
 	animateScrollTo = function (num, type) {
-		console.log('ani: ' + num);
+		// console.log('ani: ' + num);
 		var doms = bannerArea,
 			chiildDom = doms.children(),
 			childSize = chiildDom.size(),
@@ -203,7 +203,6 @@
 		siderBalControl(doms.attr('data-position'));
 	};
 
-
 	//屏幕尺寸改变
 	$(window).resize(function (event) {
 		animateScrollTo(0, 'reset');
@@ -218,17 +217,30 @@
 	};
 
 
-	//section6:切換效果
-	$(".content ul li").on('mousemove', function (event) {
-		var x = event;
+	tabCurrent = function(obj){
 		$(".content ul li").find('span').removeClass('current');
-		$(this).find('span').addClass('current');
+		obj.find('span').addClass('current');
 
 		var _tabImg = $("#tabImg");
 		$("#tabImg").attr('class', '');
 		$("#tabImg").addClass('tabImg');
-		$("#tabImg").addClass('tab' + ($(this).index() + 1));
+		$("#tabImg").addClass('tab' + (obj.index() + 1));
+	} 
 
+	//section6:切換效果
+	$(".content ul li").on('mousemove', function () {
+		tabCurrent($(this));
+	});
+
+	//section6:手機觸碰點擊切換效果
+	$(".content ul li").on('click touchstart', function () {
+		tabCurrent($(this));
+	});
+
+	//section8:加入我們按鈕
+	btn_joinus.on('click touchstart', function () {
+		idx = 8;
+		console.log('btn_joinus');
 	});
 
 	//亂數產生驗證碼
@@ -299,23 +311,6 @@
 					}
 				},
 				submitHandler: function (form) {
-					console.log("submit: " + $(form).serialize());
-					// $.ajax({
-					// 	type: "POST",
-					// 	data: $(form).serialize(),
-					// 	url: phpUrl + "PHPMailer/mail.php",
-					// 	success: function (e) {
-					// 		alert('sucess!');
-					// 		return false;
-					// 	},
-					// 	error: function () {
-					// 		$('#contact').fadeTo("slow", 0.15, function () {
-					// 			$('#error').fadeIn();
-					// 			return false;
-					// 		});
-					// 	}
-					// });
-					// console.log($(form).serialize());
 					return false;
 				}
 			});
