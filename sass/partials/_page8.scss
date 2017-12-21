@@ -1,0 +1,26 @@
+@import "../base/_variables.scss";
+.pageBg_06 {
+    position: relative;
+}
+
+.btn_joinus {
+    position: absolute;
+    background-image: url(../images/btn_joinus-0.png);
+    width: 460px;
+    height: 70px;
+    top: 68%;
+    left: 10%;
+    &:hover {
+        background-image: url(../images/btn_joinus-1.png);
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width:$screen-xs-min) and (max-width:$screen-sm-max) {
+    .btn_joinus {
+        width: 460px;
+        height: 70px;
+        top: 45%;
+        left: 10%;
+    }
+}
