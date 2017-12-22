@@ -35,14 +35,45 @@
 	//手機點擊側邊攔
 	tagDom.on('click touchstart', function () {
 		idx = $(this).index();
+		typing = false;
+		typingObj.attr("readonly", "true");
 	});
+
+	var typingObj;
+	$('.wpcf7-form input').on('click touchstart', function () {
+		typing = true;
+		typingObj = $(this);
+		typingObj.removeAttr("readonly");
+	});
+
+	$('#contactForm input').on('click touchstart', function () {
+		typing = true;
+		typingObj = $(this);
+		typingObj.removeAttr("readonly");
+	});
+
+	$('.wpcf7-form textarea').on('click touchstart', function () {
+		typing = true;
+		typingObj = $(this);
+		typingObj.removeAttr("readonly");
+	});
+
+	$('#contactForm textarea').on('click touchstart', function () {
+		typing = true;
+		typingObj = $(this);
+		typingObj.removeAttr("readonly");
+	});
+
+	// $('#pageBg_09').on('click touchstart', function () {
+	// });
 
 	//手機觸碰滑動 --start
 	var lastY,
 		idx = 0,
 		currentIdx,
 		up = 0,
-		down = 0;
+		down = 0,
+		typing = false;
 
 	$(document).bind('touchstart', function (e) {
 		lastY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
@@ -56,6 +87,10 @@
 		} else {
 			down += 1;
 		}
+
+		if (up > 0 || down > 0)
+			typing = false;
+		typingObj.attr("readonly", "true");
 	});
 
 	$(document).bind('touchend', function (e) {
@@ -68,6 +103,14 @@
 		currentIdx = idx;
 		up = 0;
 		down = 0;
+
+		// console.log(typing);
+		if (typing) {
+			typingObj.focus();
+			typingObj.focus();
+			// console.log(typingObj.attr('name'));
+
+		}
 		e.preventDefault()
 	});
 	//手機觸碰滑動 --end
@@ -205,7 +248,14 @@
 
 	//屏幕尺寸改变
 	$(window).resize(function (event) {
-		animateScrollTo(0, 'reset');
+		// console.log(!typing);
+		if (!typing)
+			animateScrollTo(0, 'reset');
+		else {
+			// alert('???');
+			animateScrollTo(idx);
+		}
+
 	});
 
 	siderBalControl = function (topNum) {
@@ -217,7 +267,7 @@
 	};
 
 
-	tabCurrent = function(obj){
+	tabCurrent = function (obj) {
 		$(".content ul li").find('span').removeClass('current');
 		obj.find('span').addClass('current');
 
@@ -225,7 +275,7 @@
 		$("#tabImg").attr('class', '');
 		$("#tabImg").addClass('tabImg');
 		$("#tabImg").addClass('tab' + (obj.index() + 1));
-	} 
+	}
 
 	//section6:切換效果
 	$(".content ul li").on('mousemove', function () {
@@ -238,9 +288,18 @@
 	});
 
 	//section8:加入我們按鈕
+	btn_joinus.on('click', function () {
+		animateScrollTo(8);
+	});
+
+	//section8:加入我們按鈕
 	btn_joinus.on('click touchstart', function () {
 		idx = 8;
-		console.log('btn_joinus');
+	});
+
+	//Submit
+	$(".wpcf7-submit").on('click touchstart', function () {
+		$('.wpcf7-form').submit();
 	});
 
 	//亂數產生驗證碼
@@ -267,8 +326,8 @@
 			this.Validation();
 		},
 		create_captcha: function () {
-			this.cache.captcha = makeid();
-			document.getElementById('captcha').src = phpUrl + "get_captcha_img.php?rnd=" + Math.random() + "&para=" + WEBAPP.cache.captcha;
+			// this.cache.captcha = makeid();
+			// document.getElementById('captcha').src = phpUrl + "get_captcha_img.php?rnd=" + Math.random() + "&para=" + WEBAPP.cache.captcha;
 		},
 		Validation: function () {
 
@@ -322,5 +381,8 @@
 	$('#captcha').click(function () {
 		WEBAPP.create_captcha();
 	});
+
+
+
 
 })(jQuery);
