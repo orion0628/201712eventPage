@@ -3747,11 +3747,11 @@ div.section > div {
 }
 
 .content li span {
-  color: #f68c1f;
+  color: #f8cd0ffd;
 }
 
 .content li span.current {
-  color: #fff671;
+  color: #fbf6b6;
 }
 
 .content li span:hover {
