@@ -382,6 +382,11 @@
 		WEBAPP.create_captcha();
 	});
 
+	//修正submit後頁籤元件異常問題
+	var url = window.location.href;
+	if(url.indexOf("#") !== -1) {
+		animateScrollTo(8);
+	}
 
 
 
